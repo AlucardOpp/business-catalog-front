@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1402,7 +1404,7 @@ button,
 .header--main {
   height: 1000px;
   margin-bottom: 130px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .header.header--404 {
@@ -1671,7 +1673,7 @@ button,
   text-transform: uppercase;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  margin: 0;
+  margin: 46px 20px 0 33px;
   max-width: 638px;
   position: relative;
   z-index: 1;
@@ -1684,8 +1686,8 @@ button,
 .header__static-right {
   z-index: 0;
   position: absolute;
-  right: -145px;
-  top: -339px;
+  right: 0;
+  top: 0ж;
 }
 
 .header__static-left {
@@ -1733,7 +1735,7 @@ button,
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   max-width: 346px;
-  margin: -20px 0 107px 20px;
+  margin: 27px 0 145px -8px;
 }
 
 .header__blue-image .header__arrow {
@@ -1752,8 +1754,8 @@ button,
 .header__animation-bottom-center {
   position: absolute;
   bottom: 0;
-  right: 348px;
-  bottom: -219px;
+  right: 330px;
+  bottom: -201px;
   z-index: 1;
 }
 
