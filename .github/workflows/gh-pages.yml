@@ -1,35 +1,29 @@
 name: Deploy to GitHub-Pages
-
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check Out
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
-
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-
-      - name: Installing Dependencies
-        run: npm i
-
-      - name: Building
-        run: npm run build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FOLDER: ./build
-          BRANCH: gh-pages
-          SINGLE_COMMIT: false
+ on:
+   push:
+     branches:
+       - master
+ jobs:
+   deploy:
+     name: Deploy
+     runs-on: ubuntu-latest
+     steps:
+       - name: Setup Node
+         uses: actions/setup-node@v3
+         with:
+           node-version: 16.x
+       - name: Checkout
+         uses: actions/checkout@v3
+         with:
+           persist-credentials: false
+       - name: Install dependencies
+         run: npm i
+       - name: Build project
+         run: npm run build
+       - name: Deploy
+         uses: JamesIves/github-pages-deploy-action@v4
+         with:
+           token: ${{ secrets.GITHUB_TOKEN }}
+           folder: ./build
+           branch: gh-pages
+           single-commit: true
