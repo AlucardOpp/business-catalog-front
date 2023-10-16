@@ -1,0 +1,10 @@
+mixin header(headerMods, currentUrl)
+  header.header(class=headerMods)
+    .header__img.header__img--left-bottom-static
+      //- +img("content", "header-static-left", "png", 908, 1000, "Декоративная картинка")
+    if(currentUrl === "index.html")
+      h1.header__title
+        span каталог <br> промышленных <br> и аграрных предприятий республики Мордовия
+    else
+      h1.header__title
+        a(href="index.html", aria-label="Переход на главную") каталог <br> промышленных <br> и аграрных предприятий республики Мордовия

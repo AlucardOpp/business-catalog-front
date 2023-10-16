@@ -1,0 +1,49 @@
+.card-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: $color-default-white;
+  border: 1px solid $color-gainsboro;
+
+  &:hover {
+    & .card-tab__image {
+      transform: scale(1.1);
+    }
+  }
+
+  @include vp-1563 {
+    padding: 10px;
+  }
+
+  &__image {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    transition: transform $trans-default;
+
+    @include vp-1563 {
+      width: 164px;
+      height: 164px;
+    }
+
+    @include vp-767 {
+      width: auto;
+      height: auto;
+      max-width: 140px;
+      max-height: 136px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+
+    @include vp-1563 {
+      font-size: 12px;
+    }
+  }
+}

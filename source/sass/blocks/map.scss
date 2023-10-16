@@ -1,0 +1,31 @@
+.map {
+  &__title {
+    max-width: 1150px;
+    margin-bottom: 28px;
+
+    @include vp-1563 {
+      margin-bottom: 35px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+
+      & span {
+        margin-top: 10px;
+      }
+    }
+
+    & span {
+      color: $color-mandarian-orange;
+    }
+  }
+
+  #map {
+    width: 100%;
+    height: 580px;
+  }
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}

@@ -1,0 +1,16 @@
+mixin card-result(data)
+  .card-result&attributes(attributes)
+    a(href="/").card-result__image
+      +img("content/card-results", `card-result-${data.image}`, "png", 297, 297, data.title)
+    .card-result__text-content
+      a(href="/").card-result__title #[!=data.title]
+      p.card-result__text #[!=data.text]
+      a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+    .card-result__volume
+      span Объём производства
+      span.card-result__volume-number #[!=data.volume] руб.
+      span в 2022
+      a(href="/").card-result__arrow
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+          <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>

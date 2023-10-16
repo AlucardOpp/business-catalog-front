@@ -1,0 +1,5 @@
+mixin industry-card(data)
+  a.industry-card(href!=data.href)&attributes(attributes)
+    h3.industry-card__title #[!=data.title] #[!="<br>"]  #[span.industry-card__subtitle!=data.subtitle]
+    span.industry-card__companies #[span.industry-card__companies-number!=data.companyNumber] &nbsp; #[span.industry-card__companies-company компаний]
+      +icon("arrow", 23, 22)

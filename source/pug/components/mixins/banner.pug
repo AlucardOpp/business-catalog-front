@@ -1,0 +1,7 @@
+mixin banner(data)
+  article.banner&attributes(attributes)
+    .banner__content
+      h2.banner__title #[!=data.title]
+      .banner__image
+        +img("content", data.image, "png", data.width, data.height, "Декоративная картинка")
+      a.btn(href=data.href)!=data.buttonText

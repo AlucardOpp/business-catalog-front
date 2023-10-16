@@ -1,0 +1,68 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Список страниц"
+
+block main
+  style
+    include ../../sass/inline/sitemap.css
+
+  -
+    const pages = [
+      {
+        name: "Главная — index.html",
+        src: "index.html"
+      },
+      {
+        name: "Категория промышленности — industry-category.html",
+        src: "industry-category.html"
+      },
+      {
+        name: "Предприятие — enterprise.html",
+        src: "enterprise.html"
+      },
+      {
+        name: "Категория агро — agro-category.html",
+        src: "agro-category.html"
+      },
+      {
+        name: "Предприятие агро — agro-enterprise.html",
+        src: "agro-enterprise.html"
+      },
+      {
+        name: "Инвест проекты — investment-projects.html",
+        src: "investment-projects.html"
+      },
+      {
+        name: "Инвест проект — investment-project.html",
+        src: "investment-project.html"
+      },
+      {
+        name: "Результаты поиска — search-result.html",
+        src: "search-result.html"
+      },
+      {
+        name: "404 — 404.html",
+        src: "404.html"
+      }
+    ]
+
+  main
+    .sitemap
+      .container
+        img(src="https://via.placeholder.com/300x150", width="300", alt="Логотип проекта")
+        h1 Список страниц
+        ol
+          each page in pages
+            li
+              if page.id
+                label(for=page.id)
+                  span!= page.name
+                input.visually-hidden(type="checkbox", checked=true, id=page.id)
+                div
+                  ul
+                    each item in page.innerList
+                      li
+                        a(href= item.src)= item.name
+              else
+                a(href= page.src)= page.name

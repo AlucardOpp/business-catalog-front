@@ -1,0 +1,128 @@
+.card-investment {
+  margin-bottom: 50px;
+
+  @include vp-1563 {
+    margin-bottom: 60px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+
+  & .card-investment__save {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    background: $black-to-right;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 42px;
+
+    @include vp-1563 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-list {
+    list-style: none;
+    margin: 0 0 42px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: space-between;
+    border-top: 1px solid $color-whisper;
+    border-bottom: 1px solid $color-whisper;
+
+    @include vp-1563 {
+      margin-bottom: 60px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-item {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include vp-1563 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      row-gap: 10px;
+    }
+  }
+
+  &__info-title {
+    color: $color-black-pearl;
+  }
+
+  &__info-value {
+    color: $color-mandarian-orange;
+  }
+
+  &__text {
+    color: $color-default-black;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 130%;
+    margin: 0 0 50px;
+
+    @include vp-1563 {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 60px;
+      max-width: 723px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include vp-767 {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+  }
+}

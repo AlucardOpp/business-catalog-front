@@ -1,0 +1,52 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    header.header.header--search-result.header--inner
+      .container
+        a(href="/").header__back
+          +icon("arrow", 23, 22)
+          span Назад
+        h1.header__title.title.title--white Результаты поиска
+        .header__arrow
+          +icon("arrow", 23, 22)
+        .header__inner-image
+          +img("content", "header-search-result-image", "png", 635, 580, "Декоративная картинка")
+    .card-results
+      .container
+        .card-results__list
+          - for (let i = 0; i < 3; i++)
+              li
+                +card-result(cardResults[i])
+    .navigation
+      .container
+        ul.navigation__list
+          li.navigation__item
+            button(type="button" aria-label="Переключить страницу поиска").navigation__button 1
+          li.navigation__item
+            button(type="button" aria-label="Переключить страницу поиска").navigation__button.is-active 2
+          li.navigation__item
+            button(type="button" aria-label="Переключить страницу поиска").navigation__button 3
+          li.navigation__item
+            button(type="button" aria-label="Переключить страницу поиска").navigation__button 4
+          li.navigation__item
+            button(type="button" aria-label="Переключить страницу поиска").navigation__button 5
+    .search.search--search-result
+      .container
+        span.search__new-search Новый поиск
+        .search__form
+          .form(action="" method="get")
+            .search__input-container
+              input.search__input(name="search" placeholder="Поиск" type="search")
+              button.search__button.btn(type="submit")!="Искать"
+
+block modals

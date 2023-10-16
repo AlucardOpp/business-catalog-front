@@ -1,0 +1,36 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    header.header.header--agro-category.header--inner
+      .container
+        a(href="/").header__back
+          +icon("arrow", 23, 22)
+          span Назад
+        h1.header__title.title.title--white Животноводство
+        .header__arrow
+          +icon("arrow", 23, 22)
+        .header__inner-image
+          +img("content", "header-agro-image", "png", 973, 580, "Декоративная картинка")
+    +search().search--agro-category
+    +card-results(cardResults)
+    .tabs.agro-category-tabs
+      .container
+        h2.tabs__title.title #[!=tabs.agroCategoryTabs.title] #[!="<br>"] #[span.tabs__subtitle!=tabs.agroCategoryTabs.subTitle]
+        .tabs__element(data-tabs='element')
+          - for (let i = 0; i < tabs.agroCategoryTabs.titles.length; i++)
+            +card-tab(i)
+    .map
+      .container
+        .map__title.title Карта Предприятий #[span!='ЖИВОТНОВОДСТВА']
+      <div id="map" width="100%"></div>
+block modals

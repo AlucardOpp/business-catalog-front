@@ -1,0 +1,7 @@
+mixin card-results(data)
+  .card-results
+    .container
+      .card-results__list
+        - for (let i = 0; i < data.length; i++)
+            li
+              +card-result(data[i])

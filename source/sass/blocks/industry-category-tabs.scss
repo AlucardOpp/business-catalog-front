@@ -1,0 +1,11 @@
+.industry-category-tabs {
+  margin-bottom: 100px;
+
+  @include vp-1563 {
+    margin-bottom: 60px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}

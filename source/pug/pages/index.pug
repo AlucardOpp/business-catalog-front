@@ -1,0 +1,46 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    header.header.header--main
+      .header__images
+        .header__red-image
+          p каталог <br> промышленных <br> и аграрных предприятий <br> #[span!="республики Мордовия"]
+          +img("content", `header-red-pattern`, "png", 970, 970, 'Красный паттерн')
+        .header__static-right
+          +img("content", `header-static-right`, "png", 1539, 1539, 'Картинка в шапке')
+        .header__static-left
+          +img("content", `header-static-left`, "png", 908, 1000, 'Картинка в шапке')
+        .header__blue-image
+          p А также высокое качество позиционных исследований позволяет выполнить важные задания по разработке.
+          .header__arrow
+            +icon("arrow", 33, 33)
+        .header__animation-bottom-center
+          +img("content", `header-animation-bottom-center`, "png", 589, 589, 'Картинка в шапке')
+        .header__animation-bottom-right
+          +img("content", `header-animation-bottom-right`, "png", 1280, 460, 'Картинка в шапке')
+    +search().search--main
+    +industry()
+    +agricultural()
+    +tabs().main-tabs
+    article.banner.banner--red.banner--map
+      .banner__content
+        h2.banner__title Инвестиционная карта региона
+        .banner__image
+          +img("content", "decoration-map", "png", 522, 220, "Декоративная картинка")
+        a.btn.btn--border(href="/") Открыть
+    .map
+      .container
+        .map__title.title Карта Предприятий <br> #[span!="Республики МОРДОВИЯ"]
+      <div id="map" width="100%"></div>
+
+block modals

@@ -1,0 +1,8 @@
+mixin industry()
+  section.industry()
+    .container
+      h2.industry__title.title() промышленность
+      ul.industry__list
+        - for (let i = 0; i < industryCards.length; i++)
+            li
+              +industry-card(industryCards[i])

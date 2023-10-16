@@ -1,0 +1,76 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+$color-accent-main:                 #2c39f2;
+$color-accent-second:               #212121;
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-neon-blue:                   #2c39f2;
+$color-torch-red:                   #ff1553;
+$color-provincial-pink:             #fce6d9;
+$color-black-pearl:                 #000e22;
+$color-mandarian-orange:            #951a1a;
+$color-remy:                        #fddada;
+$color-snow:                        #fffcfc;
+$color-tangaroa:                    #002940;
+$color-columbia-blue:               rgba(151, 234, 255, 0.80);
+$color-gainsboro:                   #dfdfdf;
+$color-brown:                       #9d2222;
+$color-whisper:                     #eeeeee;
+$color-azure:                       #f2f4f4;
+$color-maroon:                      #6b0606;
+
+// Gradient
+
+$black-to-right:                    radial-gradient(223.95% 83.78% at 68.75% 50%, #002C43 0%, #000E22 100%);
+$red-to-right:                      linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default:                        16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-rouble:                         "Rouble", "Arial", sans-serif;
+
+$ff-montserrat:                    "Montserrat", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-360:                            360px;
+$vp-375:                            375px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;
+$vp-1564:                           1564px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

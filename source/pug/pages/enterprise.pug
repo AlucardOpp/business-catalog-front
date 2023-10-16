@@ -1,0 +1,72 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    header.header.header--enterprise.header--inner
+      .container
+        a(href="/").header__back
+          +icon("arrow", 23, 22)
+          span Назад
+        p.header__subtitle СВЕТОТЕХНИЧЕСКАЯ #[span!="ПРОДУКЦИЯ"]
+        h1.header__title.title.title--white АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"
+        .header__arrow
+          +icon("arrow", 23, 22)
+        .header__inner-image
+          +img("content", "header-enterprise-image", "png", 311, 311, "QR-код")
+          +icon("enterprise-arrow", 38, 93)
+          p.header__image-text Сохранить Компанию в контактах
+    .card-results.card-results--enterprise
+      .container
+        .card-results__list
+            li
+              .card-result.card-result--enterprise
+                button.btn.card-result__save(type="button") Сохранить Компанию в контактах
+                a(href="/").card-result__image
+                  +img("content/card-results", `card-result-first`, "png", 297, 297, 'АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"')
+                .card-result__text-content
+                  p.card-result__text АО «Ардатовский светотехнический завод» имеет более 3000 моделей световых приборов. Выпускаются светильники для общественного, промышленного, специального и уличного освещения. Производство признано соответствующим стандарту менеджмента качества ISO 9001- 2015.
+                  .card-result__info
+                    p.card-result__info-text 431890, Республика Мордовия, Ардатовский район, р.п. Тургенево, ул. Заводская, 73
+                    p.card-result__info-text +7 (83431)210-09, +7 800 550 9112
+                    p.card-result__info-text mirsveta@astz.ru
+                    p.card-result__info-text astz.ru
+                  a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+                .card-result__volume
+                  span Объём производства
+                  span.card-result__volume-number 1 000 940 руб.
+                  span в 2022
+                  a(href="/").card-result__arrow
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                      <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+    .tabs.enterprise-tabs.no-transition-global(data-tabs='parent', data-delay='300')&attributes(attributes)
+      .container
+        h2.tabs__title.title #[span.tabs__subtitle!=tabs.enterpriseTabs.subTitle] #[!="<br>"] #[!=tabs.enterpriseTabs.title]
+        ul.tabs__controls(data-tabs='controls')
+          <div class="tabs__select custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-1"><span class="custom-select__placeholder">Выберите одну из опций</span>
+            <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"><svg width="23" height="22" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow"></use></svg></span></button>
+            <ul class="custom-select__list" role="listbox">
+              - for (let i = 0; i < tabs.enterpriseTabs.tabsTitles.length; i++)
+                li.custom-select__item.tabs__control.btn(tabindex="0" data-select-value=`id-${i}` aria-selected="true" role="option" data-tabs='control')!=tabs.enterpriseTabs.tabsTitles[i]
+            </ul>
+          </div>
+        .tabs__content(data-tabs='content')
+          - for (let i = 0; i < tabs.enterpriseTabs.tabsTitles.length; i++)
+            .tabs__element(data-tabs='element')
+              - for (let i = 0; i < tabs.enterpriseTabs.titles.length; i++)
+                +card-tab(i)
+    .map
+      .container
+        .map__title.title Карта Предприятий #[span!='<br> АО "АРДАТОВСКИЙ <br> СВЕТОТЕХНИЧЕСКИЙ ЗАВОД" ']
+      <div id="map" width="100%"></div>
+
+block modals

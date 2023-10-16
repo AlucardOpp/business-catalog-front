@@ -1,0 +1,27 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    header.header.header--404.header--inner
+      .container
+        a(href="/").header__back
+          +icon("arrow", 23, 22)
+          span Назад
+        h1.header__title.title.title--white СТРАНИЦА НЕ НАЙДЕНА
+        .header__arrow
+          +icon("arrow", 23, 22)
+        .header__inner-image
+          +img("content", "header-404", "png", 901, 580, "404")
+    +search().search--404
+    a(href="/").btn.btn--back Вернуться на главную
+
+block modals

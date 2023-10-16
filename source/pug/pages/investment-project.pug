@@ -1,0 +1,60 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    header.header.header--investment-project.header--inner
+      .container
+        a(href="/").header__back
+          +icon("arrow", 23, 22)
+          span Назад
+        p.header__subtitle ИНВЕСТПРОЕКТЫ АПК РЕСПУБЛИКИ МОРДОВИЯ
+        h1.header__title.title.title--white Рузаевский район, г. Рузаевка, ООО МПК "Атяшевский"
+        .header__arrow
+          +icon("arrow", 23, 22)
+        .header__inner-image
+          +img("content", "header-enterprise-image", "png", 311, 311, "QR-код")
+          +icon("enterprise-arrow", 38, 93)
+          p.header__image-text Сохранить Компанию в контактах
+    .card-investment
+      .container
+        button.btn.card-investment__save(type="button") Сохранить Компанию в контактах
+        h2.card-investment__title Рузаевский район, г. Рузаевка, ООО МПК "Атяшевский" Строительство завода по первичной и последующей (промышленной) переработке мясной продукции мощностью 1000 тонн в месяц
+        ul.card-investment__info-list
+          li.card-investment__info-item
+            span.card-investment__info-title сумма инвестиций
+            span.card-investment__info-value 150 млн. руб.
+          li.card-investment__info-item
+            span.card-investment__info-title сроки реализации
+            span.card-investment__info-value вторая половина 2024
+        p.card-investment__text Как уже неоднократно упомянуто, сторонники тоталитаризма в науке могут быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. И нет сомнений, что реплицированные с зарубежных источников, современные исследования представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Для современного мира современная методология разработки позволяет выполнить важные задания по разработке стандартных подходов. Идейные соображения высшего порядка, а также высокое качество позиционных исследований выявляет срочную потребность поэтапного и последовательного развития общества. Разнообразный и богатый опыт говорит нам, что консультация с широким активом однозначно фиксирует необходимость дальнейших направлений развития. <br> <br> Для современного мира высокое качество позиционных исследований предоставляет широкие возможности для укрепления моральных ценностей. Таким образом, убеждённость некоторых оппонентов требует от нас анализа инновационных методов управления процессами. Есть над чем задуматься: интерактивные прототипы призваны к ответу. Задача организации, в особенности же глубокий уровень погружения не даёт нам иного выбора, кроме определения кластеризации усилий. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии описаны максимально подробно. Имеется спорная
+        ul.card-investment__images
+          li.card-investment__image
+            +img("content/card-investment", "1", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "2", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "3", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "4", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "5", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "6", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "7", "jpg", 376, 300, "Картинка инвест. проекта")
+          li.card-investment__image
+            +img("content/card-investment", "8", "jpg", 376, 300, "Картинка инвест. проекта")
+    .map
+      .container
+        .map__title.title Карта Предприятий #[span!='<br> Республики МОРДОВИЯ ']
+      <div id="map" width="100%"></div>
+block modals

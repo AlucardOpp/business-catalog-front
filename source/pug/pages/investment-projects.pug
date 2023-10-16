@@ -1,0 +1,63 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    header.header.header--investment-projects.header--inner
+      .container
+        a(href="/").header__back
+          +icon("arrow", 23, 22)
+          span Назад
+        h1.header__title.title.title--white ИНВЕСТПРОЕКТЫ АПК <br> #[span!="РЕСПУБЛИКИ МОРДОВИЯ"]
+        .header__arrow
+          +icon("arrow", 23, 22)
+        .header__inner-image
+          +img("content", "header-agro-image", "png", 973, 580, "Декоративная картинка")
+    .card-results.card-results--investment-projects
+      .container
+        p.card-results__info Мы вынуждены отталкиваться от того, что базовый вектор развития прекрасно подходит для реализации поставленных обществом задач. Идейные соображения высшего порядка.
+        .card-results__list
+          - for (let i = 0; i < cardResults.length; i++)
+              li
+                .card-result.card-result--investment
+                  a(href="/").card-result__image
+                    +img("content/card-results", `card-result-${cardResults[i].image}`, "png", 297, 297, cardResults[i].title)
+                  .card-result__text-content
+                    a(href="/").card-result__title Рузаевский район, г. Рузаевка, ООО МПК "Атяшевский" Строительство завода по первичной и последующей (промышленной) переработке мясной продукции мощностью 1000 тонн в месяц;
+                    .card-result__info
+                      .card-result__info-text
+                        svg(width=33, height=33, aria-hidden="true")
+                          use(xlink:href="img/sprite.svg#map")
+                        span 431890, Республика Мордовия, Ардатовский район, р.п. Тургенево, ул. Заводская, 73
+                      .card-result__info-text
+                        svg(width=33, height=33, aria-hidden="true")
+                          use(xlink:href="img/sprite.svg#phone")
+                        .card-result__phones
+                          |  #[a(href="tel:+78343121009")!="+7 (83431)210-09"], #[a(href="78005509112")!="+7 800 550 9112"]
+                      .card-result__info-text
+                        svg(width=33, height=33, aria-hidden="true")
+                          use(xlink:href="img/sprite.svg#mail")
+                        | #[a(href="mailto:mirsveta@astz.ru")!="mirsveta@astz.ru"]
+                      .card-result__info-text
+                        svg(width=33, height=33, aria-hidden="true")
+                          use(xlink:href="img/sprite.svg#site")
+                        | #[a(href="astz.ru")!="astz.ru"]
+                    a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+                  .card-result__save
+                    .card-result__qr
+                      +img("content", "card-result-qr", "png", 231, 231, "QR-код")
+                      button(type="button").card-result__save-text Сохранить Компанию в контактах
+    .map
+      .container
+        .map__title.title Карта Предприятий #[span!='<br> Республики МОРДОВИЯ ']
+      <div id="map" width="100%"></div>
+
+block modals

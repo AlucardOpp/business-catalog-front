@@ -1,0 +1,130 @@
+.search {
+ &__input-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 90px;
+
+  @include vp-1563 {
+    height: 80px;
+  }
+
+  @include vp-767 {
+    height: 53px;
+  }
+ }
+
+ &--404 {
+  margin-bottom: 51px;
+
+  @include vp-1563 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+ }
+
+ &--agro-category {
+  margin-bottom: 30px;
+ }
+
+ &--industry-category {
+  margin-bottom: 50px;
+ }
+
+ &--main {
+  margin-bottom: 65px;
+
+  @include vp-1563 {
+    margin-bottom: 60px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+&--search-result {
+  margin-bottom: 105px;
+
+  @include vp-1563 {
+    margin-bottom: 60px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+&__new-search {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 130%;
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  background: $red-to-right;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ &__input {
+  width: 100%;
+  height: inherit;
+  padding: 23px 200px 23px 40px;
+  color: $color-tangaroa;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  border: 1px solid $color-brown;
+  transition: opacity $trans-default;
+
+  @include vp-1563 {
+    font-size: 20px;
+    padding-right: 225px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    padding-right: 110px;
+    padding: 10px 110px 10px 20px;
+    border: 1px solid $color-gainsboro;
+  }
+
+  &::placeholder {
+    color: $color-tangaroa;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+ }
+
+ &__button.btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 19px 40px;
+
+  @include vp-1563 {
+    padding: 19px 64px;
+  }
+
+  @include vp-767 {
+    padding: 10px 20px;
+  }
+ }
+}

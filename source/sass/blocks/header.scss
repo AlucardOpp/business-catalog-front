@@ -1,0 +1,620 @@
+.header {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+
+  &--main {
+    height: 1000px;
+    margin-bottom: 130px;
+    overflow: hidden;
+  }
+
+  &.header--404 {
+    padding-bottom: 150px;
+    margin-bottom: 60px;
+
+    & .header__inner-image {
+      right: 0;
+      bottom: 0;
+      top: auto;
+
+      @include vp-1563 {
+        width: 835px;
+        height: 538px;
+        right: -128px;
+      }
+
+      @include vp-767 {
+        width: 283px;
+        height: 182px;
+        right: -34px;
+        bottom: 12px;
+      }
+    }
+
+    & .header__title {
+      @include vp-1563 {
+        margin-bottom: 174px;
+      }
+
+      @include vp-767 {
+        max-width: 170px;
+        margin-bottom: 80px;
+      }
+    }
+
+    & .header__back {
+      @include vp-1563 {
+        margin-bottom: 122px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include vp-1563 {
+      padding-bottom: 53px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &--industry-category {
+    & .header__title {
+      max-width: 711px;
+
+      @include vp-1563 {
+        max-width: 356px;
+      }
+
+      @include vp-767 {
+        max-width: 261px;
+      }
+    }
+  }
+
+  &--agro-category {
+    & .header__title {
+      margin-bottom: 116px;
+    }
+
+    & .header__inner-image {
+      @include vp-1563 {
+        bottom: 0;
+        right: 0;
+        top: auto;
+        width: 681px;
+      }
+
+      @include vp-767 {
+        width: 75%;
+        height: auto;
+      }
+    }
+  }
+
+  &--enterprise,
+  &--agro-enterprise {
+    & .header__title {
+      max-width: 977px;
+
+      @include vp-1563 {
+        max-width: 489px;
+        margin-bottom: 141px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 23px;
+      }
+    }
+
+    & .header__back {
+      margin-bottom: 83px;
+
+      @include vp-1563 {
+        margin-bottom: 80px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 22px;
+      }
+    }
+
+    & .container {
+      position: relative;
+
+      @media (max-width: 1699px) {
+        position: static;
+      }
+    }
+
+    & .header__inner-image {
+      right: 0;
+      bottom: auto;
+      top: 47%;
+      transform: translateY(-50%);
+
+      & svg {
+        position: absolute;
+        stroke: $color-default-white;
+        right: 0;
+        top: 280px;
+
+        & path {
+          stroke: $color-default-white;
+        }
+
+        @include vp-1563 {
+          right: -15px;
+          top: 240px;
+        }
+      }
+
+      & .header__image-text {
+        position: absolute;
+        color: $color-default-white;
+        text-align: right;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin: 0;
+        width: 401px;
+        bottom: -125px;
+        right: 0;
+
+        @include vp-1563 {
+          right: -15px;
+          bottom: -135px;
+        }
+      }
+
+      @media (max-width: 1699px) {
+        right: 40px;
+      }
+
+      @include vp-1563 {
+        width: 265px;
+        height: 265px;
+        right: 45px;
+        transform: none;
+        top: 60px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &--investment-project {
+    & .header__subtitle {
+      max-width: 283px;
+
+      @include vp-1563 {
+        max-width: 601px;
+      }
+    }
+
+    & .header__title {
+      max-width: 1168px;
+
+      @include vp-1563 {
+        max-width: 584px;
+        margin-bottom: 141px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 20px;
+      }
+    }
+
+    & .header__back {
+      margin-bottom: 83px;
+
+      @include vp-1563 {
+        margin-bottom: 80px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 20px;
+      }
+    }
+
+    & .container {
+      position: relative;
+
+      @media (max-width: 1699px) {
+        position: static;
+      }
+    }
+
+    & .header__inner-image {
+      right: 0;
+      bottom: auto;
+      top: 47%;
+      transform: translateY(-50%);
+
+      & svg {
+        position: absolute;
+        stroke: $color-default-white;
+        right: 0;
+        top: 280px;
+
+        & path {
+          stroke: $color-default-white;
+        }
+
+        @include vp-1563 {
+          right: -15px;
+          top: 240px;
+        }
+      }
+
+      & .header__image-text {
+        position: absolute;
+        color: $color-default-white;
+        text-align: right;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin: 0;
+        width: 401px;
+        bottom: -125px;
+        right: 0;
+
+        @include vp-1563 {
+          right: -15px;
+          bottom: -135px;
+        }
+      }
+
+      @media (max-width: 1699px) {
+        right: 40px;
+      }
+
+      @include vp-1563 {
+        width: 265px;
+        height: 265px;
+        right: 45px;
+        transform: none;
+        top: 60px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &--agro-enterprise {
+    & .header__subtitle {
+      margin-bottom: 42px;
+
+      @include vp-767 {
+        margin-bottom: 10px;
+      }
+    }
+
+    & .header__title {
+      margin-bottom: 116px;
+
+      @include vp-767 {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  &--search-result {
+    & .header__title {
+      margin-bottom: 116px;
+
+      @include vp-1563 {
+        margin-bottom: 174px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 104px;
+      }
+    }
+
+    & .header__back {
+      @include vp-1563 {
+        margin-bottom: 124px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 22px;
+      }
+    }
+
+    & .header__inner-image {
+      right: 100px;
+      bottom: 0;
+
+      @include vp-1563 {
+        width: 526px;
+        height: 495px;
+        top: auto;
+        right: -50px;
+
+        & img {
+          height: 100%;
+        }
+      }
+
+      @include vp-767 {
+        width: 235px;
+        height: auto;
+        bottom: -55px;
+      }
+    }
+  }
+
+  &.header--investment-projects {
+    & .header__inner-image {
+      right: -200px;
+      bottom: 0;
+    }
+
+    @include vp-767 {
+      margin-bottom: 17px;
+    }
+  }
+
+  &--inner {
+    background: $red-to-right;
+    padding-top: 100px;
+    padding-bottom: 95px;
+    margin-bottom: 50px;
+
+    @include vp-1563 {
+      padding-bottom: 53px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      padding-top: 33px;
+      padding-bottom: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    color: $color-default-white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+    max-width: 233px;
+    margin: 0 0 20px 0;
+
+    & span {
+      color: $color-provincial-pink;
+    }
+
+    @include vp-1563 {
+      max-width: 601px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    position: relative;
+    z-index: 1;
+
+    & span {
+      color: $color-provincial-pink;
+    }
+
+    @include vp-1563 {
+      margin-bottom: 116px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__arrow {
+    & svg {
+      stroke: $color-default-white;
+      width: 33px;
+      height: 33px;
+      transform: rotate(90deg);
+
+      @include vp-767 {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  &__back {
+    margin-bottom: 147px;
+    color: $color-default-white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 110%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: opacity $trans-default;
+
+    & svg {
+      margin-right: 10px;
+      stroke: $color-default-white;
+      transform: rotate(180deg);
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include vp-1563 {
+      margin-bottom: 150px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__logo {
+    color: $color-default-white;
+  }
+
+  &__inner-image {
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+
+    & img {
+      object-fit: cover;
+    }
+
+    @include vp-1563 {
+      bottom: auto;
+      top: -100px;
+      right: -225px;
+    }
+
+    @include vp-767 {
+      width: 230px;
+      height: 191px;
+      bottom: -17px;
+      right: -96px;
+      top: auto;
+    }
+  }
+
+  &__red-image {
+    position: absolute;
+    width: 730px;
+    height: 730px;
+    background-color: $color-maroon;
+    transform: rotate(-45deg);
+    // top: -190px;
+    top: -128px;
+    left: 328px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    & img {
+      width: 970px;
+      max-width: none;
+      position: absolute;
+      transform: rotate(45deg);
+      right: -122px;
+      top: -76px;
+    }
+
+    & p {
+      color: #FFF;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 110%;
+      text-transform: uppercase;
+      transform: rotate(45deg);
+      margin: 0;
+      max-width: 638px;
+      position: relative;
+      z-index: 1;
+    }
+
+    & span {
+      color: $color-provincial-pink;
+    }
+  }
+
+  &__static-right {
+    z-index: 0;
+    position: absolute;
+    right: -145px;
+    top: -339px;
+  }
+
+  &__static-left {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & img {
+      clip-path: polygon(0 29%, 0% 100%, 78% 100%);
+    }
+  }
+
+  &__blue-image {
+    position: absolute;
+    width: 503px;
+    height: 503px;
+    background-color: $color-tangaroa;
+    transform: rotate(-45deg);
+    bottom: -180px;
+    left: 621px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+    & p {
+      color: $color-default-white;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 130%;
+      transform: rotate(45deg);
+      max-width: 346px;
+      margin: -20px 0 107px 20px;
+    }
+
+    & .header__arrow {
+      position: absolute;
+      bottom: 50px;
+      right: 190px;
+      transform: rotate(45deg);
+
+      & svg {
+        width: 33px;
+        height: 33px;
+      }
+    }
+  }
+
+  &__animation-bottom-center {
+    position: absolute;
+    bottom: 0;
+    // right: 266px;
+    // bottom: -267px;
+    right: 348px;
+    bottom: -219px;
+    z-index: 1;
+  }
+
+  &__animation-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+    & img {
+      clip-path: polygon(100% 7%, 67% 100%, 100% 100%);
+    }
+  }
+}
