@@ -26,6 +26,7 @@
 
   &:hover {
     background-color: $color-tangaroa;
+    border: 1px solid $color-tangaroa;
 
     & .industry-card__title {
       color: $color-default-white;

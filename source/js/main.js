@@ -5,6 +5,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {initTabs} from './modules/tabs/init-tabs';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {mapInit} from './modules/map/map-init';
+import {initParallax} from './modules/parallax/init-parallax.js';
 
 // ---------------------------------
 
@@ -17,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
+  initParallax();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

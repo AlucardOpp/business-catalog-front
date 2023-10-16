@@ -27,7 +27,7 @@ const mapInit = () => {
 
   const blueCollection = new ymaps.GeoObjectCollection({}, {
     iconLayout: 'default#image',
-    iconImageHref: './img/svg/blue-marker.svg',
+    iconImageHref: '../../../img/svg/blue-marker.svg',
     iconImageSize: [29, 39],
   });
 
@@ -37,7 +37,7 @@ const mapInit = () => {
 
   const redCollection = new ymaps.GeoObjectCollection({}, {
     iconLayout: 'default#image',
-    iconImageHref: './img/svg/red-marker.svg',
+    iconImageHref: '../../../img/svg/red-marker.svg',
     iconImageSize: [29, 39],
   });
 

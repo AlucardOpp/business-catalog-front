@@ -354,14 +354,16 @@
     }
 
     @include vp-767 {
-      background: $black-to-right;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      & span {
+        background: $black-to-right;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 
-  &__volume-number {
+  & span.card-result__volume-number {
     font-size: 24px;
     font-weight: 700;
 
