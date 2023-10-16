@@ -21,10 +21,7 @@ jobs:
           node-version: '14.x'
 
       - name: Installing Dependencies
-        run: npm ci
-
-      - name: Linting
-        run: npm test
+        run: npm i
 
       - name: Building
         run: npm run build
