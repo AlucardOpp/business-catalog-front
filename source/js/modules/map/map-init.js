@@ -55,8 +55,25 @@ const mapInit = () => {
     });
   }
 
+  const iconNumberLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #000000; font-weight: 700; font-family: Montserrat; font-size: 24px; line-height: 110%; margin-top: 11px;">{{ properties.geoObjects.length }}</div>'
+  );
+
   const redClusterer = new ymaps.Clusterer({
-    preset: 'islands#redClusterIcons',
+    clusterIcons: [
+      {
+        href: '../../../img/svg/red-clusterer-less-10.svg',
+        size: [48, 48],
+        offset: [0, 0],
+      },
+      {
+        href: '../../../img/svg/red-clusterer-more-10.svg',
+        size: [56, 56],
+        offset: [0, 0],
+      }
+    ],
+    clusterNuymbers: [10],
+    clusterIconContentLayout: iconNumberLayout,
   });
   redClusterer.add(redObjects);
 
@@ -71,7 +88,20 @@ const mapInit = () => {
   }
 
   const blueClusterer = new ymaps.Clusterer({
-    preset: 'islands#blueClusterIcons',
+    clusterIcons: [
+      {
+        href: '../../../img/svg/blue-clusterer-less-10.svg',
+        size: [48, 48],
+        offset: [0, 0],
+      },
+      {
+        href: '../../../img/svg/blue-clusterer-more-10.svg',
+        size: [56, 56],
+        offset: [0, 0],
+      }
+    ],
+    clusterNuymbers: [10],
+    clusterIconContentLayout: iconNumberLayout,
   });
   blueClusterer.add(blueObjects);
 
