@@ -21,7 +21,11 @@
 
   #map {
     width: 100%;
-    height: 580px;
+    height: 500px;
+
+    & ~ ymaps:not(:first-child) {
+      display: none;
+    }
 
     @include vp-1563 {
       margin-top: 34px;
@@ -29,6 +33,7 @@
 
     @include vp-767 {
       margin-top: 0;
+      height: 310px;
     }
   }
 

@@ -16,10 +16,10 @@ block main
       .header__red-image(class="rellax" data-rellax-speed="10")
         p каталог <br> промышленных <br> и аграрных предприятий <br> #[span!="республики Мордовия"]
         +img("content", `header-red-pattern`, "png", 1033, 755, 'Красный паттерн')
-      .header__static-right(class="rellax" data-rellax-speed="7")
+      .header__static-right
         +img("content", `header-static-right`, "png", 1089, 1089, 'Картинка в шапке')
-      .header__static-left(class="rellax" data-rellax-speed="20")
-        +img("content", `header-static-left`, "png", 908, 1000, 'Картинка в шапке')
+      .header__static-left
+        img(src="img/content/header-static-left.png" width="908" height="1000" alt="Картинка в шапке" class="rellax" data-rellax-speed="20")
       .header__blue-image(class="rellax" data-rellax-speed="4")
         +img("content", `header-blue`, "png", 712, 712, 'Синий ромб')
         .header__blue-content
@@ -38,7 +38,9 @@ block main
       .banner__content
         h2.banner__title Инвестиционная карта региона
         .banner__image
-          +img("content", "decoration-map", "png", 522, 220, "Декоративная картинка")
+          picture
+           source(srcset="img/content/decoration-map-mobile.png" media="(max-width: 767px)")
+           img(src="img/content/decoration-map.png" width="522" height="220" alt="Декоративная картинка")
         a.btn.btn--border(href="/") Открыть
     .map
       .container
