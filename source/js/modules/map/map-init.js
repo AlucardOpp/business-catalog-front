@@ -22,7 +22,7 @@ const mapInit = () => {
   const getRedOptions = () => {
     return {
       iconLayout: 'default#image',
-      iconImageHref: '../../../img/svg/red-marker.svg',
+      iconImageHref: './img/svg/red-marker.svg',
       iconImageSize: [29, 39],
     };
   };
@@ -40,12 +40,12 @@ const mapInit = () => {
   const redClusterer = new ymaps.Clusterer({
     clusterIcons: [
       {
-        href: '../../../img/svg/red-clusterer-less-10.svg',
+        href: './img/svg/red-clusterer-less-10.svg',
         size: [48, 48],
         offset: [0, 0],
       },
       {
-        href: '../../../img/svg/red-clusterer-more-10.svg',
+        href: './img/svg/red-clusterer-more-10.svg',
         size: [56, 56],
         offset: [0, 0],
       }
@@ -58,7 +58,7 @@ const mapInit = () => {
   const getBlueOptions = () => {
     return {
       iconLayout: 'default#image',
-      iconImageHref: '../../../img/svg/blue-marker.svg',
+      iconImageHref: './img/svg/blue-marker.svg',
       iconImageSize: [29, 39],
     };
   };
@@ -71,12 +71,12 @@ const mapInit = () => {
   const blueClusterer = new ymaps.Clusterer({
     clusterIcons: [
       {
-        href: '../../../img/svg/blue-clusterer-less-10.svg',
+        href: './img/svg/blue-clusterer-less-10.svg',
         size: [48, 48],
         offset: [0, 0],
       },
       {
-        href: '../../../img/svg/blue-clusterer-more-10.svg',
+        href: './img/svg/blue-clusterer-more-10.svg',
         size: [56, 56],
         offset: [0, 0],
       }
