@@ -408,6 +408,14 @@ template {
   src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/montserrat-black.woff2") format("woff2"), url("../fonts/montserrat-black.woff") format("woff");
+}
+
 *,
 *::before,
 *::after {
@@ -1154,6 +1162,10 @@ button,
   row-gap: 20px;
 }
 
+.card-result.card-result--investment .card-result__tags .card-result__found {
+  font-weight: 700;
+}
+
 .card-result__qr img {
   width: 265px;
   height: 265px;
@@ -1189,6 +1201,14 @@ button,
   display: block;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.card-result__title .card-result__found {
+  background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
 .card-result__title:hover {
@@ -1407,6 +1427,7 @@ button,
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .header.header--404 {
@@ -1638,9 +1659,8 @@ button,
 
 .header__red-image {
   position: absolute;
-  width: 53.8%;
+  width: 52.1%;
   height: auto;
-  top: -128px;
   top: 0;
   left: 9.3%;
   z-index: 2;
@@ -1677,7 +1697,7 @@ button,
   position: absolute;
   width: 56.75%;
   right: 4.1%;
-  top: -11.2%;
+  top: -16.2%;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   overflow: hidden;
@@ -1719,7 +1739,7 @@ button,
   position: absolute;
   width: 37.09%;
   height: auto;
-  bottom: -28.5%;
+  bottom: -24.5%;
   left: 27%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1734,7 +1754,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  z-index: 1;
+  z-index: 2;
   -webkit-animation: blueImageFromDown 4s ease;
   animation: blueImageFromDown 4s ease;
 }
@@ -1776,10 +1796,9 @@ button,
 .header__animation-bottom-center {
   width: 21.74%;
   position: absolute;
-  bottom: 0;
   right: 21.6%;
-  bottom: -11.5%;
-  z-index: 1;
+  bottom: -6.5%;
+  z-index: 2;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   overflow: hidden;
@@ -1794,7 +1813,7 @@ button,
 
 .header__animation-bottom-right {
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   right: -1px;
   z-index: 1;
   width: 66.7%;
@@ -1939,7 +1958,7 @@ button,
   }
 
   100% {
-    top: 0;
+    top: 0%;
     opacity: 1;
   }
 }
@@ -1951,7 +1970,7 @@ button,
   }
 
   100% {
-    top: 0;
+    top: 0%;
     opacity: 1;
   }
 }
@@ -2022,24 +2041,24 @@ button,
 
 @-webkit-keyframes blueImageFromDown {
   0% {
-    bottom: -128.5%;
+    bottom: -124.5%;
     opacity: 0;
   }
 
   100% {
-    bottom: -28.5%;
+    bottom: -24.5%;
     opacity: 1;
   }
 }
 
 @keyframes blueImageFromDown {
   0% {
-    bottom: -128.5%;
+    bottom: -124.5%;
     opacity: 0;
   }
 
   100% {
-    bottom: -28.5%;
+    bottom: -24.5%;
     opacity: 1;
   }
 }
@@ -4133,6 +4152,10 @@ button,
     bottom: -11.3%;
   }
 
+  .header__animation-bottom-right {
+    bottom: 0;
+  }
+
   .footer {
     padding-top: 30px;
   }
@@ -4571,14 +4594,14 @@ button,
   .card-result__volume span {
     background: radial-gradient(223.95% 83.78% at 68.75% 50%, #002C43 0%, #000E22 100%);
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
   }
 
   .card-result span.card-result__volume-number {
     background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
   }
 
@@ -4837,6 +4860,7 @@ button,
     left: -8.2%;
     -webkit-animation: none;
     animation: none;
+    z-index: 2;
   }
 
   .header__animation-bottom-center img {
@@ -4878,7 +4902,7 @@ button,
     margin: 20px 30px 0 20px;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
   }
 
   .header__mobile-text span {
