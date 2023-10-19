@@ -10,20 +10,20 @@ block variables
   - const currentUrl = ""
 
 block main
+  header.header.header--enterprise.header--inner
+    .container
+      a(href="/").header__back
+        +icon("arrow", 23, 22)
+        span Назад
+      p.header__subtitle СВЕТОТЕХНИЧЕСКАЯ #[span!="ПРОДУКЦИЯ"]
+      h1.header__title.title.title--white АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"
+      .header__arrow
+        +icon("arrow", 23, 22)
+      .header__inner-image
+        +img("content", "header-enterprise-image", "png", 311, 311, "QR-код")
+        +icon("enterprise-arrow", 38, 93)
+        p.header__image-text Сохранить Компанию в контактах
   main
-    header.header.header--enterprise.header--inner
-      .container
-        a(href="/").header__back
-          +icon("arrow", 23, 22)
-          span Назад
-        p.header__subtitle СВЕТОТЕХНИЧЕСКАЯ #[span!="ПРОДУКЦИЯ"]
-        h1.header__title.title.title--white АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"
-        .header__arrow
-          +icon("arrow", 23, 22)
-        .header__inner-image
-          +img("content", "header-enterprise-image", "png", 311, 311, "QR-код")
-          +icon("enterprise-arrow", 38, 93)
-          p.header__image-text Сохранить Компанию в контактах
     .card-results.card-results--enterprise
       .container
         .card-results__list
@@ -36,9 +36,12 @@ block main
                   p.card-result__text АО «Ардатовский светотехнический завод» имеет более 3000 моделей световых приборов. Выпускаются светильники для общественного, промышленного, специального и уличного освещения. Производство признано соответствующим стандарту менеджмента качества ISO 9001- 2015.
                   .card-result__info
                     p.card-result__info-text 431890, Республика Мордовия, Ардатовский район, р.п. Тургенево, ул. Заводская, 73
-                    p.card-result__info-text +7 (83431)210-09, +7 800 550 9112
-                    p.card-result__info-text mirsveta@astz.ru
-                    p.card-result__info-text astz.ru
+                    p.card-result__info-text
+                      |  #[a(href="tel:+78343121009")!="+7 (83431)210-09"], #[a(href="78005509112")!="+7 800 550 9112"]
+                    p.card-result__info-text
+                      | #[a(href="mailto:mirsveta@astz.ru")!="mirsveta@astz.ru"]
+                    p.card-result__info-text
+                      | #[a(href="astz.ru")!="astz.ru"]
                   a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
                 .card-result__volume
                   span Объём производства

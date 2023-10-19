@@ -10,17 +10,17 @@ block variables
   - const currentUrl = ""
 
 block main
+  header.header.header--agro-category.header--inner
+    .container
+      a(href="/").header__back
+        +icon("arrow", 23, 22)
+        span Назад
+      h1.header__title.title.title--white Животноводство
+      .header__arrow
+        +icon("arrow", 23, 22)
+      .header__inner-image
+        +img("content", "header-agro-image", "png", 973, 580, "Декоративная картинка")
   main
-    header.header.header--agro-category.header--inner
-      .container
-        a(href="/").header__back
-          +icon("arrow", 23, 22)
-          span Назад
-        h1.header__title.title.title--white Животноводство
-        .header__arrow
-          +icon("arrow", 23, 22)
-        .header__inner-image
-          +img("content", "header-agro-image", "png", 973, 580, "Декоративная картинка")
     +search().search--agro-category
     +card-results(cardResults)
     .tabs.agro-category-tabs

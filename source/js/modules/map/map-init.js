@@ -1,8 +1,37 @@
 const mapInit = () => {
+  const map = document.querySelector('#map');
+
+  if (!map) {
+    return;
+  }
+
+  const zoomControl = new ymaps.control.ZoomControl({
+    options: {
+      float: 'none',
+      position: {
+        right: '15px',
+        top: '100px',
+      },
+    },
+  });
+
+  const geolocationControl = new ymaps.control.GeolocationControl({
+    options: {
+      float: 'none',
+      position: {
+        right: '15px',
+        bottom: '155px',
+      },
+    },
+  });
+
+
   const myMap = new ymaps.Map('map', {
     center: [54.22019715558561, 44.448889951251],
     zoom: 9,
+    controls: [zoomControl, geolocationControl],
   });
+
 
   const redCoords = [
     [54.422251814108, 45.322027847298294],
@@ -92,27 +121,31 @@ const mapInit = () => {
   const industrialCategory = document.querySelector('#industrial');
   const agroCategory = document.querySelector('#agro');
 
-  industrialCategory.addEventListener('change', () => {
-    if (industrialCategory.checked === true) {
-      myMap.geoObjects.add(redClusterer);
-    } else {
-      myMap.geoObjects.remove(redClusterer);
-    }
-  });
+  if (industrialCategory) {
+    industrialCategory.addEventListener('change', () => {
+      if (industrialCategory.checked === true) {
+        myMap.geoObjects.add(redClusterer);
+      } else {
+        myMap.geoObjects.remove(redClusterer);
+      }
+    });
+  }
 
-  agroCategory.addEventListener('change', () => {
-    if (agroCategory.checked === true) {
-      myMap.geoObjects.add(blueClusterer);
-    } else {
-      myMap.geoObjects.remove(blueClusterer);
-    }
-  });
+  if (agroCategory) {
+    agroCategory.addEventListener('change', () => {
+      if (agroCategory.checked === true) {
+        myMap.geoObjects.add(blueClusterer);
+      } else {
+        myMap.geoObjects.remove(blueClusterer);
+      }
+    });
+  }
 
 
-  myMap.controls.remove('searchControl');
-  myMap.controls.remove('trafficControl');
-  myMap.controls.remove('typeSelector');
-  myMap.controls.remove('rulerControl');
+  // myMap.controls.remove('searchControl');
+  // myMap.controls.remove('trafficControl');
+  // myMap.controls.remove('typeSelector');
+  // myMap.controls.remove('rulerControl');
 };
 
 ymaps.ready(mapInit);

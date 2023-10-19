@@ -10,24 +10,70 @@ block variables
   - const currentUrl = ""
 
 block main
+  header.header.header--search-result.header--inner
+    .container
+      a(href="/").header__back
+        +icon("arrow", 23, 22)
+        span Назад
+      h1.header__title.title.title--white Результаты поиска
+      .header__arrow
+        +icon("arrow", 23, 22)
+      .header__inner-image
+        +img("content", "header-search-result-image", "png", 635, 580, "Декоративная картинка")
   main
-    header.header.header--search-result.header--inner
-      .container
-        a(href="/").header__back
-          +icon("arrow", 23, 22)
-          span Назад
-        h1.header__title.title.title--white Результаты поиска
-        .header__arrow
-          +icon("arrow", 23, 22)
-        .header__inner-image
-          +img("content", "header-search-result-image", "png", 635, 580, "Декоративная картинка")
     .card-results
       .container
         p.card-results__title.title #[span!="Вы искали:"] <br> «Резистор»
         .card-results__list
-          - for (let i = 0; i < 3; i++)
+            li
+              .card-result
+                a(href="/").card-result__image
+                  +img("content/card-results", `card-result-first`, "png", 297, 297, 'АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"')
+                .card-result__text-content
+                  a(href="/").card-result__title АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"
+                  p.card-result__text АО «Ардатовский светотехнический завод» имеет более 3000 моделей световых приборов. Выпускаются светильники для общественного, промышленного, специального и уличного освещения. Производство признано соответствующим стандарту менеджмента качества ISO 9001- 2015.
+                  a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора, #[span.card-result__found!='резистор']оры
+                .card-result__volume
+                  span Объём производства
+                  span.card-result__volume-number 1 000 940 руб.
+                  span в 2022
+                  a(href="/").card-result__arrow
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                      <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
               li
-                +card-result(cardResults[i])
+              .card-result
+                a(href="/").card-result__image
+                  +img("content/card-results", `card-result-first`, "png", 297, 297, 'АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"')
+                .card-result__text-content
+                  a(href="/").card-result__title АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"
+                  p.card-result__text ООО «ЗСП» является крупным производителем и поставщиком светотехнической продукции. Выпускает светильники для общественного, промышленного и уличного освещения, приборы для обеззараживания воздуха, световые конструкции, источники постоянного тока, светодиодные модули и блоки аварийного питания, производитель #[span.card-result__found!='резистор']ных установок
+                  a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+                .card-result__volume
+                  span Объём производства
+                  span.card-result__volume-number 1 000 940 руб.
+                  span в 2022
+                  a(href="/").card-result__arrow
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                      <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+              li
+              .card-result
+                a(href="/").card-result__image
+                  +img("content/card-results", `card-result-first`, "png", 297, 297, 'АО "АРДАТОВСКИЙ СВЕТОТЕХНИЧЕСКИЙ ЗАВОД"')
+                .card-result__text-content
+                  a(href="/").card-result__title ИП НИКОЛАЙ #[span.card-result__found!="РЕЗИСТоР"]ИЕНКОВ
+                  p.card-result__text АО «Ардатовский светотехнический завод» имеет более 3000 моделей световых приборов. Выпускаются светильники для общественного, промышленного, специального и уличного освещения. Производство признано соответствующим стандарту менеджмента качества ISO 9001- 2015.
+                  a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+                .card-result__volume
+                  span Объём производства
+                  span.card-result__volume-number 1 000 940 руб.
+                  span в 2022
+                  a(href="/").card-result__arrow
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                      <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
     .navigation
       .container
         ul.navigation__list

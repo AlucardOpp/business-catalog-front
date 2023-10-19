@@ -27,3 +27,13 @@
     url("../fonts/montserrat-bold.woff2") format("woff2"),
     url("../fonts/montserrat-bold.woff") format("woff");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Montserrat";
+  font-display: swap;
+  src:
+    url("../fonts/montserrat-black.woff2") format("woff2"),
+    url("../fonts/montserrat-black.woff") format("woff");
+}

@@ -10,17 +10,17 @@ block variables
   - const currentUrl = ""
 
 block main
+  header.header.header--investment-projects.header--inner
+    .container
+      a(href="/").header__back
+        +icon("arrow", 23, 22)
+        span Назад
+      h1.header__title.title.title--white ИНВЕСТПРОЕКТЫ АПК <br> #[span!="РЕСПУБЛИКИ МОРДОВИЯ"]
+      .header__arrow
+        +icon("arrow", 23, 22)
+      .header__inner-image
+        +img("content", "header-agro-image", "png", 973, 580, "Декоративная картинка")
   main
-    header.header.header--investment-projects.header--inner
-      .container
-        a(href="/").header__back
-          +icon("arrow", 23, 22)
-          span Назад
-        h1.header__title.title.title--white ИНВЕСТПРОЕКТЫ АПК <br> #[span!="РЕСПУБЛИКИ МОРДОВИЯ"]
-        .header__arrow
-          +icon("arrow", 23, 22)
-        .header__inner-image
-          +img("content", "header-agro-image", "png", 973, 580, "Декоративная картинка")
     .card-results.card-results--investment-projects
       .container
         p.card-results__info Мы вынуждены отталкиваться от того, что базовый вектор развития прекрасно подходит для реализации поставленных обществом задач. Идейные соображения высшего порядка.

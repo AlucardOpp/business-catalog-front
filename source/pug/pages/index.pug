@@ -10,26 +10,26 @@ block variables
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
+  header.header.header--main
+    p.header__mobile-text каталог <br> промышленных <br> и аграрных предприятий <br> #[span!="республики Мордовия"]
+    .header__red-image(class="rellax" data-rellax-speed="10")
+      p каталог <br> промышленных <br> и аграрных предприятий <br> #[span!="республики Мордовия"]
+      +img("content", `header-red-pattern`, "png", 1033, 755, 'Красный паттерн')
+    .header__static-right
+      +img("content", `header-static-right`, "png", 1089, 1089, 'Картинка в шапке')
+    .header__static-left
+      img(src="img/content/header-static-left.png" width="908" height="1000" alt="Картинка в шапке" class="rellax" data-rellax-speed="20")
+    .header__blue-image(class="rellax" data-rellax-speed="4")
+      +img("content", `header-blue`, "png", 712, 712, 'Синий ромб')
+      .header__blue-content
+        p А также высокое качество позиционных исследований позволяет выполнить важные задания по разработке.
+        .header__arrow
+          +icon("arrow", 33, 33)
+    .header__animation-bottom-center(class="rellax" data-rellax-speed="7")
+      +img("content", `header-animation-bottom-center`, "png", 417, 417, 'Картинка в шапке')
+    .header__animation-bottom-right(class="rellax" data-rellax-speed="5")
+      +img("content", `header-animation-bottom-right`, "png", 1280, 460, 'Картинка в шапке')
   main
-    header.header.header--main
-      p.header__mobile-text каталог <br> промышленных <br> и аграрных предприятий <br> #[span!="республики Мордовия"]
-      .header__red-image(class="rellax" data-rellax-speed="10")
-        p каталог <br> промышленных <br> и аграрных предприятий <br> #[span!="республики Мордовия"]
-        +img("content", `header-red-pattern`, "png", 1033, 755, 'Красный паттерн')
-      .header__static-right
-        +img("content", `header-static-right`, "png", 1089, 1089, 'Картинка в шапке')
-      .header__static-left
-        img(src="img/content/header-static-left.png" width="908" height="1000" alt="Картинка в шапке" class="rellax" data-rellax-speed="20")
-      .header__blue-image(class="rellax" data-rellax-speed="4")
-        +img("content", `header-blue`, "png", 712, 712, 'Синий ромб')
-        .header__blue-content
-          p А также высокое качество позиционных исследований позволяет выполнить важные задания по разработке.
-          .header__arrow
-            +icon("arrow", 33, 33)
-      .header__animation-bottom-center(class="rellax" data-rellax-speed="7")
-        +img("content", `header-animation-bottom-center`, "png", 417, 417, 'Картинка в шапке')
-      .header__animation-bottom-right(class="rellax" data-rellax-speed="5")
-        +img("content", `header-animation-bottom-right`, "png", 1280, 460, 'Картинка в шапке')
     +search().search--main
     +industry()
     +agricultural()
