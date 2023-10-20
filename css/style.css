@@ -658,7 +658,7 @@ button,
   min-height: 220px;
   position: relative;
   max-width: 1604px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 0 20px;
 }
 
@@ -1578,6 +1578,7 @@ button,
 .header.header--investment-projects .header__inner-image {
   right: -200px;
   bottom: 0;
+  top: 0;
 }
 
 .header--inner {
@@ -3523,7 +3524,7 @@ button,
 }
 
 .agricultural {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .agricultural__title {
@@ -3532,7 +3533,7 @@ button,
 
 .agricultural__list {
   list-style: none;
-  margin: 0 0 20px 0;
+  margin: 0;
   padding: 0;
   display: -ms-grid;
   display: grid;
@@ -3846,6 +3847,7 @@ button,
   .banner {
     min-height: 112px;
     padding: 23px 56px 23px 26px;
+    margin-bottom: 60px;
   }
 
   .tabs.enterprise-tabs {
@@ -4441,6 +4443,7 @@ button,
   .banner {
     min-height: 165px;
     padding: 20px;
+    margin-bottom: 40px;
   }
 
   .tabs.enterprise-tabs {
@@ -4836,6 +4839,10 @@ button,
     margin-bottom: 40px;
   }
 
+  .header.header--investment-projects .header__inner-image {
+    display: none;
+  }
+
   .header.header--investment-projects {
     margin-bottom: 17px;
   }
@@ -5088,6 +5095,7 @@ button,
   .agricultural__title {
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 0;
   }
 
   .agricultural__list {
