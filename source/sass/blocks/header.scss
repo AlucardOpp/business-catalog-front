@@ -381,6 +381,11 @@
     & .header__inner-image {
       right: -200px;
       bottom: 0;
+      top: 0;
+
+      @include vp-767 {
+        display: none;
+      }
     }
 
     @include vp-767 {
