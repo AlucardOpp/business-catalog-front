@@ -448,11 +448,13 @@
   }
 
   &__arrow {
+
     & svg {
       stroke: $color-default-white;
       width: 33px;
       height: 33px;
       transform: rotate(90deg);
+      animation: arrowMove 3s infinite;
 
       @include vp-767 {
         width: 15px;
@@ -1055,5 +1057,19 @@
   100% {
     transform: translateX(0) scale(1);
     clip-path: polygon(100% 7%, 67% 100%, 100% 100%);
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0%) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(100%) rotate(90deg);
+  }
+
+  100% {
+    transform: translateY(0%) rotate(90deg);
   }
 }

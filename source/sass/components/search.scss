@@ -2,7 +2,7 @@
  &__input-container {
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   height: 90px;
 
   @include vp-1563 {
