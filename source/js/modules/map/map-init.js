@@ -33,34 +33,35 @@ const mapInit = () => {
   });
 
 
-  const redCoords = [
+  let redCoords = [
     [54.422251814108, 45.322027847298294],
     [54.43186044174936, 45.332327529915496],
     [54.415844804920326, 45.346060440071746],
-    [54.32604456497944, 43.32578759179032],
-    [54.09106653463098, 43.22279076561844]
+    [54.32604456497944, 43.32578759179032]
   ];
 
-  if (map.getAttribute('data-longitude').length > 0) {
-    const longitude = Number(map.getAttribute('data-longitude'));
-    const latitude = Number(map.getAttribute('data-latitude'));
-    let mapCoords = [];
-    mapCoords.push(longitude);
-    mapCoords.push(latitude);
-    redCoords.push(mapCoords);
+
+  if (map.getAttribute('data-red-coords').length > 0) {
+    redCoords = JSON.parse(map.getAttribute('data-red-coords'));
   }
 
-  const blueCoords = [
+  let blueCoords = [
     [54.318013214108994, 44.4383150787436],
     [54.3035592216153, 44.46440760804048],
     [54.42810563616309, 43.75812457039163],
     [54.0333466411536, 44.407135788664185]
   ];
 
+  if (map.getAttribute('data-blue-coords').length > 0) {
+    blueCoords = JSON.parse(map.getAttribute('data-blue-coords'));
+  }
+
+  blueCoords = JSON.parse(map.getAttribute('data-blue-coords'));
+
   const getRedOptions = () => {
     return {
       iconLayout: 'default#image',
-      iconImageHref: './img/svg/red-marker.svg',
+      iconImageHref: '/local/templates/main/img/svg/red-marker.svg',
       iconImageSize: [29, 39],
     };
   };
@@ -78,12 +79,12 @@ const mapInit = () => {
   const redClusterer = new ymaps.Clusterer({
     clusterIcons: [
       {
-        href: './img/svg/red-clusterer-less-10.svg',
+        href: '/local/templates/main/img/svg/red-clusterer-less-10.svg',
         size: [48, 48],
         offset: [0, 0],
       },
       {
-        href: './img/svg/red-clusterer-more-10.svg',
+        href: '/local/templates/main/img/svg/red-clusterer-more-10.svg',
         size: [56, 56],
         offset: [0, 0],
       }
@@ -96,7 +97,7 @@ const mapInit = () => {
   const getBlueOptions = () => {
     return {
       iconLayout: 'default#image',
-      iconImageHref: './img/svg/blue-marker.svg',
+      iconImageHref: '/local/templates/main/img/svg/blue-marker.svg',
       iconImageSize: [29, 39],
     };
   };
@@ -109,12 +110,12 @@ const mapInit = () => {
   const blueClusterer = new ymaps.Clusterer({
     clusterIcons: [
       {
-        href: './img/svg/blue-clusterer-less-10.svg',
+        href: '/local/templates/main/img/svg/blue-clusterer-less-10.svg',
         size: [48, 48],
         offset: [0, 0],
       },
       {
-        href: './img/svg/blue-clusterer-more-10.svg',
+        href: '/local/templates/main/img/svg/blue-clusterer-more-10.svg',
         size: [56, 56],
         offset: [0, 0],
       }
@@ -149,12 +150,6 @@ const mapInit = () => {
       }
     });
   }
-
-
-  // myMap.controls.remove('searchControl');
-  // myMap.controls.remove('trafficControl');
-  // myMap.controls.remove('typeSelector');
-  // myMap.controls.remove('rulerControl');
 };
 
 ymaps.ready(mapInit);
