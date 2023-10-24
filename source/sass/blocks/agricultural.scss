@@ -52,10 +52,10 @@
   }
 
   @include vp-1563 {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 }

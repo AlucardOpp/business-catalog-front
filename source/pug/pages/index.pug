@@ -47,7 +47,7 @@ block main
           picture
            source(srcset="img/content/decoration-map-mobile.png" media="(max-width: 767px)")
            img(src="img/content/decoration-map.png" width="522" height="220" alt="Декоративная картинка")
-        a.btn.btn--border(href="/") Открыть
+        a.btn.btn--border(href="/" target="_blank") Открыть
     .map
       .container
         .map__title.title Карта Предприятий <br> #[span!="Республики МОРДОВИЯ"]
@@ -58,6 +58,9 @@ block main
           .map__checkbox.map__checkbox--agro
             input(class="visually-hidden" type="checkbox" id="agro" name="category" checked)
             label(for="agro") Аграрные предприятия
-      <div id="map" width="100%"></div>
+      <div id="map" width="100%" data-longitude="54.05024316666863" data-latitude="44.941669242911466"></div>
 
 block modals
+
+
+//- 54.12936101036847,45.10371758275521

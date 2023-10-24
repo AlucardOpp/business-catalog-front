@@ -5,7 +5,7 @@ mixin card-result(data)
     .card-result__text-content
       a(href="/").card-result__title #[!=data.title]
       p.card-result__text #[!=data.text]
-      a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+      .card-result__tags #[a(href="/")!="Светильники"], #[a(href="/")!="Осветительные комплексы"], #[a(href="/")!="прожектора"]
     .card-result__volume
       span Объём производства
       span.card-result__volume-number #[!=data.volume] руб.

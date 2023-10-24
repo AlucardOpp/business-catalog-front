@@ -204,6 +204,52 @@
     }
   }
 
+  &--enterprise {
+    & .header__inner-image {
+      right: 58px;
+      top: 44%;
+
+      @include vp-1563 {
+        right: 69px;
+        top: 83px;
+      }
+
+      & svg {
+        right: -36px;
+        top: 258px;
+
+        @include vp-1563 {
+          right: -38px;
+        }
+      }
+
+      & .header__image-text {
+        right: -31px;
+        bottom: -154px;
+        width: 350px;
+
+        @include vp-1563 {
+          right: -32px;
+          bottom: -148px;
+        }
+      }
+
+      & img {
+        transform: rotate(-11deg);
+      }
+    }
+
+    & .header__title {
+      @include vp-1563 {
+        max-width: 50%;
+      }
+
+      @include vp-767 {
+        max-width: none;
+      }
+    }
+  }
+
   &--investment-project {
     & .header__subtitle {
       max-width: 283px;
@@ -587,7 +633,7 @@
 
     @include vp-1563 {
       width: 73.7%;
-      top: -14.4%;
+      top: -19.4%;
       left: -6.6%;
       animation: redImageFromAboveTable 4s ease;
     }
@@ -621,7 +667,7 @@
 
     @include vp-1563 {
       width: 57%;
-      top: -11%;
+      top: -16%;
     }
 
     @include vp-767 {
@@ -638,7 +684,6 @@
     overflow: hidden;
 
     & img {
-      // clip-path: polygon(0 29%, 0% 100%, 78% 100%);
       animation: displayFromOpacityLeft 7s ease;
 
       @include vp-1563 {
@@ -652,6 +697,7 @@
 
     @include vp-1563 {
       width: 47.7%;
+      transform: translateY(-5%);
     }
 
     @include vp-767 {
@@ -767,7 +813,8 @@
 
     @include vp-1563 {
       width: 44%;
-      bottom: -25.5%;
+      // bottom: -25.5%;
+      bottom: -20.5%;
       left: 19%;
       animation: blueImageFromDownTable 4s ease;
     }
@@ -801,7 +848,7 @@
     }
 
     @include vp-1563 {
-      bottom: -11.3%;
+      bottom: -6.3%;
     }
 
     @include vp-767 {
@@ -833,7 +880,7 @@
     }
 
     @include vp-1563 {
-      bottom: 0;
+      bottom: 5%;
     }
 
     @include vp-767 {
@@ -929,12 +976,12 @@
 
 @keyframes redImageFromAboveTable {
   0% {
-    top: -114.4%;
+    top: -119.4%;
     opacity: 0;
   }
 
   100% {
-    top: -14.4;
+    top: -19.4;
     opacity: 1;
   }
 }
@@ -981,7 +1028,7 @@
 
 @keyframes blueImageFromDownTable {
   0% {
-    bottom: -125.5%;
+    bottom: -120.5%;
     opacity: 0;
   }
 
@@ -994,7 +1041,7 @@
   }
 
   100% {
-    bottom: -25.5%;
+    bottom: -20.5%;
     opacity: 1;
   }
 }

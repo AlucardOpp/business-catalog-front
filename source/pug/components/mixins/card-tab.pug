@@ -1,5 +1,11 @@
-mixin card-tab(number)
-  a.card-tab(href="/")&attributes(attributes)
-    .card-tab__image
-      +img("content/main-tabs", `${tabs.mainTabs.images[number]}-tab`, "png", 200, 200, tabs.mainTabs.titles[number])
-    h2.card-tab__title #[!=tabs.mainTabs.titles[number]]
+mixin card-tab(number, noLinks)
+  if (noLinks)
+    .card-tab(href="/")&attributes(attributes)
+      .card-tab__image
+        +img("content/main-tabs", `${tabs.mainTabs.images[number]}-tab`, "png", 200, 200, tabs.mainTabs.titles[number])
+      h2.card-tab__title #[!=tabs.mainTabs.titles[number]]
+  else
+    a.card-tab(href="/")&attributes(attributes)
+      .card-tab__image
+        +img("content/main-tabs", `${tabs.mainTabs.images[number]}-tab`, "png", 200, 200, tabs.mainTabs.titles[number])
+      h2.card-tab__title #[!=tabs.mainTabs.titles[number]]

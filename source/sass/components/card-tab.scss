@@ -12,6 +12,14 @@
     }
   }
 
+  &--enterprise {
+    &:hover {
+      & .card-tab__image {
+        transform: scale(1);
+      }
+    }
+  }
+
   @include vp-1563 {
     padding: 10px;
   }

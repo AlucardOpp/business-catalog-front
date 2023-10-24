@@ -49,8 +49,8 @@ block main
                       .card-result__info-text
                         svg(width=33, height=33, aria-hidden="true")
                           use(xlink:href="img/sprite.svg#site")
-                        | #[a(href="astz.ru")!="astz.ru"]
-                    a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+                        | #[a(href="astz.ru" target="_blank")!="astz.ru"]
+                    .card-result__tags #[a(href="/")!="Светильники"], #[a(href="/")!="Осветительные комплексы"], #[a(href="/")!="прожектора"]
                   .card-result__save
                     .card-result__qr
                       +img("content", "card-result-qr", "png", 231, 231, "QR-код")

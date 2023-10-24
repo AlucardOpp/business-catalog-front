@@ -4,6 +4,8 @@
   font-weight: 700;
   line-height: 110%;
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
 
   &--white {
     color: $color-default-white

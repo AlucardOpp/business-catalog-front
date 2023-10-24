@@ -20,7 +20,7 @@ block main
       .header__arrow
         +icon("arrow", 23, 22)
       .header__inner-image
-        +img("content", "header-enterprise-image", "png", 311, 311, "QR-код")
+        +img("content", "header-enterprise-image", "png", 266, 266, "QR-код")
         +icon("enterprise-arrow", 38, 93)
         p.header__image-text Сохранить Компанию в контактах
   main
@@ -41,8 +41,8 @@ block main
                     p.card-result__info-text
                       | #[a(href="mailto:mirsveta@astz.ru")!="mirsveta@astz.ru"]
                     p.card-result__info-text
-                      | #[a(href="astz.ru")!="astz.ru"]
-                  a(href="/").card-result__tags Светильники, Осветительные комплексы, прожектора
+                      | #[a(href="astz.ru" target="_blank")!="astz.ru"]
+                  .card-result__tags #[a(href="/")!="Светильники"], #[a(href="/")!="Осветительные комплексы"], #[a(href="/")!="прожектора"]
                 .card-result__volume
                   span Объём производства
                   span.card-result__volume-number 1 000 940 руб.
@@ -66,7 +66,7 @@ block main
           - for (let i = 0; i < tabs.enterpriseTabs.tabsTitles.length; i++)
             .tabs__element(data-tabs='element')
               - for (let i = 0; i < tabs.enterpriseTabs.titles.length; i++)
-                +card-tab(i)
+                +card-tab(i, "+").card-tab--enterprise
     .map
       .container
         .map__title.title Карта Предприятий #[span!='<br> АО "АРДАТОВСКИЙ <br> СВЕТОТЕХНИЧЕСКИЙ ЗАВОД" ']

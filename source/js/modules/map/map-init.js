@@ -41,6 +41,15 @@ const mapInit = () => {
     [54.09106653463098, 43.22279076561844]
   ];
 
+  if (map.getAttribute('data-longitude').length > 0) {
+    const longitude = Number(map.getAttribute('data-longitude'));
+    const latitude = Number(map.getAttribute('data-latitude'));
+    let mapCoords = [];
+    mapCoords.push(longitude);
+    mapCoords.push(latitude);
+    redCoords.push(mapCoords);
+  }
+
   const blueCoords = [
     [54.318013214108994, 44.4383150787436],
     [54.3035592216153, 44.46440760804048],
@@ -57,7 +66,7 @@ const mapInit = () => {
   };
 
   const redObjects = [];
-  for (let i = 0; i < blueCoords.length; i++) {
+  for (let i = 0; i < redCoords.length; i++) {
     redObjects[i] = new ymaps.Placemark(redCoords[i], {}, getRedOptions());
   }
 
