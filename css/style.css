@@ -647,6 +647,8 @@ button,
   font-weight: 700;
   line-height: 110%;
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
 }
 
 .title--white {
@@ -977,6 +979,11 @@ button,
   transform: scale(1.1);
 }
 
+.card-tab--enterprise:hover .card-tab__image {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 .card-tab__image {
   margin-bottom: 10px;
   width: 200px;
@@ -1276,7 +1283,16 @@ button,
   transition: opacity 0.3s ease;
 }
 
-.card-result__tags:hover {
+.card-result__tags a {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+.card-result__tags a:hover {
   opacity: 0.7;
 }
 
@@ -1507,6 +1523,27 @@ button,
   width: 401px;
   bottom: -125px;
   right: 0;
+}
+
+.header--enterprise .header__inner-image {
+  right: 58px;
+  top: 44%;
+}
+
+.header--enterprise .header__inner-image svg {
+  right: -36px;
+  top: 258px;
+}
+
+.header--enterprise .header__inner-image .header__image-text {
+  right: -31px;
+  bottom: -154px;
+  width: 350px;
+}
+
+.header--enterprise .header__inner-image img {
+  -webkit-transform: rotate(-11deg);
+  transform: rotate(-11deg);
 }
 
 .header--investment-project .header__subtitle {
@@ -1988,24 +2025,24 @@ button,
 
 @-webkit-keyframes redImageFromAboveTable {
   0% {
-    top: -114.4%;
+    top: -119.4%;
     opacity: 0;
   }
 
   100% {
-    top: -14.4;
+    top: -19.4;
     opacity: 1;
   }
 }
 
 @keyframes redImageFromAboveTable {
   0% {
-    top: -114.4%;
+    top: -119.4%;
     opacity: 0;
   }
 
   100% {
-    top: -14.4;
+    top: -19.4;
     opacity: 1;
   }
 }
@@ -2092,7 +2129,7 @@ button,
 
 @-webkit-keyframes blueImageFromDownTable {
   0% {
-    bottom: -125.5%;
+    bottom: -120.5%;
     opacity: 0;
   }
 
@@ -2105,14 +2142,14 @@ button,
   }
 
   100% {
-    bottom: -25.5%;
+    bottom: -20.5%;
     opacity: 1;
   }
 }
 
 @keyframes blueImageFromDownTable {
   0% {
-    bottom: -125.5%;
+    bottom: -120.5%;
     opacity: 0;
   }
 
@@ -2125,7 +2162,7 @@ button,
   }
 
   100% {
-    bottom: -25.5%;
+    bottom: -20.5%;
     opacity: 1;
   }
 }
@@ -3509,6 +3546,7 @@ button,
 
 .industry-card--dark-blue:hover {
   background-color: #951a1a;
+  border: none;
 }
 
 .industry-card--dark-blue:hover .industry-card__subtitle {
@@ -3832,21 +3870,27 @@ button,
     margin-bottom: 60px;
   }
 
+  .banner--map .banner__image {
+    width: 398px;
+    height: 112px;
+    right: 21%;
+  }
+
   .banner__title {
     font-size: 30px;
     max-width: 333px;
   }
 
   .banner__image {
-    width: 398px;
+    width: 597px;
     height: 112px;
-    right: 25%;
-    bottom: 23px;
+    right: 5%;
+    bottom: 0;
   }
 
   .banner {
     min-height: 112px;
-    padding: 23px 56px 23px 26px;
+    padding: 0 20px 0;
     margin-bottom: 60px;
   }
 
@@ -4089,6 +4133,24 @@ button,
     top: 60px;
   }
 
+  .header--enterprise .header__inner-image {
+    right: 69px;
+    top: 83px;
+  }
+
+  .header--enterprise .header__inner-image svg {
+    right: -38px;
+  }
+
+  .header--enterprise .header__inner-image .header__image-text {
+    right: -32px;
+    bottom: -148px;
+  }
+
+  .header--enterprise .header__title {
+    max-width: 50%;
+  }
+
   .header--investment-project .header__subtitle {
     max-width: 601px;
   }
@@ -4178,7 +4240,7 @@ button,
 
   .header__red-image {
     width: 73.7%;
-    top: -14.4%;
+    top: -19.4%;
     left: -6.6%;
     -webkit-animation: redImageFromAboveTable 4s ease;
     animation: redImageFromAboveTable 4s ease;
@@ -4186,7 +4248,7 @@ button,
 
   .header__static-right {
     width: 57%;
-    top: -11%;
+    top: -16%;
   }
 
   .header__static-left img {
@@ -4196,6 +4258,8 @@ button,
 
   .header__static-left {
     width: 47.7%;
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%);
   }
 
   .header__static-left::before {
@@ -4220,18 +4284,18 @@ button,
 
   .header__blue-image {
     width: 44%;
-    bottom: -25.5%;
+    bottom: -20.5%;
     left: 19%;
     -webkit-animation: blueImageFromDownTable 4s ease;
     animation: blueImageFromDownTable 4s ease;
   }
 
   .header__animation-bottom-center {
-    bottom: -11.3%;
+    bottom: -6.3%;
   }
 
   .header__animation-bottom-right {
-    bottom: 0;
+    bottom: 5%;
   }
 
   .footer {
@@ -4309,7 +4373,7 @@ button,
   }
 
   .agricultural {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .main-tabs {
@@ -4425,6 +4489,13 @@ button,
     margin-bottom: 40px;
   }
 
+  .banner--map .banner__image {
+    width: 284px;
+    height: 166px;
+    right: auto;
+    opacity: 1;
+  }
+
   .banner__title {
     font-size: 24px;
     margin-bottom: 40px;
@@ -4437,12 +4508,12 @@ button,
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 20px;
+    opacity: 0.3;
   }
 
   .banner {
     min-height: 165px;
-    padding: 20px;
+    padding: 0;
     margin-bottom: 40px;
   }
 
@@ -4801,6 +4872,10 @@ button,
     display: none;
   }
 
+  .header--enterprise .header__title {
+    max-width: none;
+  }
+
   .header--investment-project .header__title {
     margin-bottom: 20px;
   }
@@ -5110,7 +5185,7 @@ button,
   }
 
   .agricultural {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   .main-tabs {
