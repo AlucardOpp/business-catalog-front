@@ -110,18 +110,33 @@
     }
   }
 
-  &--enterprise,
-  &--agro-enterprise {
-    & .header__title {
-      max-width: 977px;
+  &--enterprise {
+    & .header__subtitle {
+      margin-bottom: 42px;
 
       @include vp-1563 {
-        max-width: 489px;
+        margin-bottom: 20px;
+        max-width: 50%;
+      }
+
+      @include vp-767 {
+        margin-bottom: 10px;
+        max-width: none;
+      }
+    }
+
+    & .header__title {
+      max-width: 977px;
+      margin-bottom: 116px;
+
+      @include vp-1563 {
         margin-bottom: 141px;
+        max-width: 50%;
       }
 
       @include vp-767 {
         margin-bottom: 23px;
+        max-width: none;
       }
     }
 
@@ -146,24 +161,28 @@
     }
 
     & .header__inner-image {
-      right: 0;
+      right: 58px;
       bottom: auto;
-      top: 47%;
+      top: 44%;
       transform: translateY(-50%);
+
+      & img {
+        transform: rotate(-11deg);
+      }
 
       & svg {
         position: absolute;
         stroke: $color-default-white;
-        right: 0;
-        top: 280px;
+        right: -36px;
+        top: 258px;
 
         & path {
           stroke: $color-default-white;
         }
 
         @include vp-1563 {
-          right: -15px;
-          top: 240px;
+          right: -38px;
+          top: 258px;
         }
       }
 
@@ -176,54 +195,6 @@
         line-height: 110%;
         text-transform: uppercase;
         margin: 0;
-        width: 401px;
-        bottom: -125px;
-        right: 0;
-
-        @include vp-1563 {
-          right: -15px;
-          bottom: -135px;
-        }
-      }
-
-      @media (max-width: 1699px) {
-        right: 40px;
-      }
-
-      @include vp-1563 {
-        width: 265px;
-        height: 265px;
-        right: 45px;
-        transform: none;
-        top: 60px;
-      }
-
-      @include vp-767 {
-        display: none;
-      }
-    }
-  }
-
-  &--enterprise {
-    & .header__inner-image {
-      right: 58px;
-      top: 44%;
-
-      @include vp-1563 {
-        right: 69px;
-        top: 83px;
-      }
-
-      & svg {
-        right: -36px;
-        top: 258px;
-
-        @include vp-1563 {
-          right: -38px;
-        }
-      }
-
-      & .header__image-text {
         right: -31px;
         bottom: -154px;
         width: 350px;
@@ -234,18 +205,20 @@
         }
       }
 
-      & img {
-        transform: rotate(-11deg);
+      @media (max-width: 1699px) {
+        right: 40px;
       }
-    }
 
-    & .header__title {
       @include vp-1563 {
-        max-width: 50%;
+        width: 265px;
+        height: 265px;
+        transform: none;
+        right: 69px;
+        top: 83px;
       }
 
       @include vp-767 {
-        max-width: none;
+        display: none;
       }
     }
   }
@@ -347,24 +320,6 @@
 
       @include vp-767 {
         display: none;
-      }
-    }
-  }
-
-  &--agro-enterprise {
-    & .header__subtitle {
-      margin-bottom: 42px;
-
-      @include vp-767 {
-        margin-bottom: 10px;
-      }
-    }
-
-    & .header__title {
-      margin-bottom: 116px;
-
-      @include vp-767 {
-        margin-bottom: 23px;
       }
     }
   }

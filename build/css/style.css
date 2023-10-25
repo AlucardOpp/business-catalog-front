@@ -1473,45 +1473,48 @@ button,
   margin-bottom: 116px;
 }
 
-.header--enterprise .header__title,
-.header--agro-enterprise .header__title {
-  max-width: 977px;
+.header--enterprise .header__subtitle {
+  margin-bottom: 42px;
 }
 
-.header--enterprise .header__back,
-.header--agro-enterprise .header__back {
+.header--enterprise .header__title {
+  max-width: 977px;
+  margin-bottom: 116px;
+}
+
+.header--enterprise .header__back {
   margin-bottom: 83px;
 }
 
-.header--enterprise .container,
-.header--agro-enterprise .container {
+.header--enterprise .container {
   position: relative;
 }
 
-.header--enterprise .header__inner-image,
-.header--agro-enterprise .header__inner-image {
-  right: 0;
+.header--enterprise .header__inner-image {
+  right: 58px;
   bottom: auto;
-  top: 47%;
+  top: 44%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.header--enterprise .header__inner-image svg,
-.header--agro-enterprise .header__inner-image svg {
+.header--enterprise .header__inner-image img {
+  -webkit-transform: rotate(-11deg);
+  transform: rotate(-11deg);
+}
+
+.header--enterprise .header__inner-image svg {
   position: absolute;
   stroke: #ffffff;
-  right: 0;
-  top: 280px;
+  right: -36px;
+  top: 258px;
 }
 
-.header--enterprise .header__inner-image svg path,
-.header--agro-enterprise .header__inner-image svg path {
+.header--enterprise .header__inner-image svg path {
   stroke: #ffffff;
 }
 
-.header--enterprise .header__inner-image .header__image-text,
-.header--agro-enterprise .header__inner-image .header__image-text {
+.header--enterprise .header__inner-image .header__image-text {
   position: absolute;
   color: #ffffff;
   text-align: right;
@@ -1520,30 +1523,9 @@ button,
   line-height: 110%;
   text-transform: uppercase;
   margin: 0;
-  width: 401px;
-  bottom: -125px;
-  right: 0;
-}
-
-.header--enterprise .header__inner-image {
-  right: 58px;
-  top: 44%;
-}
-
-.header--enterprise .header__inner-image svg {
-  right: -36px;
-  top: 258px;
-}
-
-.header--enterprise .header__inner-image .header__image-text {
   right: -31px;
   bottom: -154px;
   width: 350px;
-}
-
-.header--enterprise .header__inner-image img {
-  -webkit-transform: rotate(-11deg);
-  transform: rotate(-11deg);
 }
 
 .header--investment-project .header__subtitle {
@@ -1593,14 +1575,6 @@ button,
   width: 401px;
   bottom: -125px;
   right: 0;
-}
-
-.header--agro-enterprise .header__subtitle {
-  margin-bottom: 42px;
-}
-
-.header--agro-enterprise .header__title {
-  margin-bottom: 116px;
 }
 
 .header.header--search-result .header__title {
@@ -3838,13 +3812,11 @@ button,
 }
 
 @media (max-width: 1699px) {
-  .header--enterprise .container,
-  .header--agro-enterprise .container {
+  .header--enterprise .container {
     position: static;
   }
 
-  .header--enterprise .header__inner-image,
-  .header--agro-enterprise .header__inner-image {
+  .header--enterprise .header__inner-image {
     right: 40px;
   }
 
@@ -4100,46 +4072,23 @@ button,
     width: 681px;
   }
 
-  .header--enterprise .header__title,
-  .header--agro-enterprise .header__title {
-    max-width: 489px;
+  .header--enterprise .header__subtitle {
+    margin-bottom: 20px;
+    max-width: 50%;
+  }
+
+  .header--enterprise .header__title {
     margin-bottom: 141px;
+    max-width: 50%;
   }
 
-  .header--enterprise .header__back,
-  .header--agro-enterprise .header__back {
+  .header--enterprise .header__back {
     margin-bottom: 80px;
-  }
-
-  .header--enterprise .header__inner-image svg,
-  .header--agro-enterprise .header__inner-image svg {
-    right: -15px;
-    top: 240px;
-  }
-
-  .header--enterprise .header__inner-image .header__image-text,
-  .header--agro-enterprise .header__inner-image .header__image-text {
-    right: -15px;
-    bottom: -135px;
-  }
-
-  .header--enterprise .header__inner-image,
-  .header--agro-enterprise .header__inner-image {
-    width: 265px;
-    height: 265px;
-    right: 45px;
-    -webkit-transform: none;
-    transform: none;
-    top: 60px;
-  }
-
-  .header--enterprise .header__inner-image {
-    right: 69px;
-    top: 83px;
   }
 
   .header--enterprise .header__inner-image svg {
     right: -38px;
+    top: 258px;
   }
 
   .header--enterprise .header__inner-image .header__image-text {
@@ -4147,8 +4096,13 @@ button,
     bottom: -148px;
   }
 
-  .header--enterprise .header__title {
-    max-width: 50%;
+  .header--enterprise .header__inner-image {
+    width: 265px;
+    height: 265px;
+    -webkit-transform: none;
+    transform: none;
+    right: 69px;
+    top: 83px;
   }
 
   .header--investment-project .header__subtitle {
@@ -4857,23 +4811,22 @@ button,
     height: auto;
   }
 
-  .header--enterprise .header__title,
-  .header--agro-enterprise .header__title {
-    margin-bottom: 23px;
-  }
-
-  .header--enterprise .header__back,
-  .header--agro-enterprise .header__back {
-    margin-bottom: 22px;
-  }
-
-  .header--enterprise .header__inner-image,
-  .header--agro-enterprise .header__inner-image {
-    display: none;
+  .header--enterprise .header__subtitle {
+    margin-bottom: 10px;
+    max-width: none;
   }
 
   .header--enterprise .header__title {
+    margin-bottom: 23px;
     max-width: none;
+  }
+
+  .header--enterprise .header__back {
+    margin-bottom: 22px;
+  }
+
+  .header--enterprise .header__inner-image {
+    display: none;
   }
 
   .header--investment-project .header__title {
@@ -4886,14 +4839,6 @@ button,
 
   .header--investment-project .header__inner-image {
     display: none;
-  }
-
-  .header--agro-enterprise .header__subtitle {
-    margin-bottom: 10px;
-  }
-
-  .header--agro-enterprise .header__title {
-    margin-bottom: 23px;
   }
 
   .header.header--search-result .header__title {
