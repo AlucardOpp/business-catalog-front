@@ -792,22 +792,17 @@ button,
 
 .tabs {
   max-width: 100%;
-}
-
-.tabs.enterprise-tabs {
   margin-bottom: 100px;
 }
 
-.tabs.agro-category-tabs,
-.tabs.agro-enterprise-tabs {
-  margin-bottom: 100px;
-}
-
-.tabs.agro-category-tabs .tabs__element,
-.tabs.agro-enterprise-tabs .tabs__element {
+.tabs.is-disabled .tabs__element {
   opacity: 1;
   visibility: visible;
   position: static;
+}
+
+.tabs.is-disabled .tabs__controls {
+  display: none;
 }
 
 .tabs__controls {
@@ -977,11 +972,6 @@ button,
 .card-tab:hover .card-tab__image {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
-
-.card-tab--enterprise:hover .card-tab__image {
-  -webkit-transform: scale(1);
-  transform: scale(1);
 }
 
 .card-tab__image {
@@ -3866,12 +3856,7 @@ button,
     margin-bottom: 60px;
   }
 
-  .tabs.enterprise-tabs {
-    margin-bottom: 60px;
-  }
-
-  .tabs.agro-category-tabs,
-  .tabs.agro-enterprise-tabs {
+  .tabs {
     margin-bottom: 60px;
   }
 
@@ -4471,12 +4456,7 @@ button,
     margin-bottom: 40px;
   }
 
-  .tabs.enterprise-tabs {
-    margin-bottom: 40px;
-  }
-
-  .tabs.agro-category-tabs,
-  .tabs.agro-enterprise-tabs {
+  .tabs {
     margin-bottom: 40px;
   }
 

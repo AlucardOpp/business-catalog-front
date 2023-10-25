@@ -1,34 +1,24 @@
 .tabs {
   max-width: 100%;
+  margin-bottom: 100px;
 
-  &.enterprise-tabs {
-    margin-bottom: 100px;
-
-    @include vp-1563 {
-      margin-bottom: 60px;
-    }
-
-    @include vp-767 {
-      margin-bottom: 40px;
-    }
+  @include vp-1563 {
+    margin-bottom: 60px;
   }
 
-  &.agro-category-tabs,
-  &.agro-enterprise-tabs {
-    margin-bottom: 100px;
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
 
-    @include vp-1563 {
-      margin-bottom: 60px;
-    }
-
-    @include vp-767 {
-      margin-bottom: 40px;
-    }
-
+  &.is-disabled {
     & .tabs__element {
       opacity: 1;
       visibility: visible;
       position: static;
+    }
+
+    & .tabs__controls {
+      display: none;
     }
   }
 

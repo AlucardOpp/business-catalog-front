@@ -51,7 +51,7 @@ block main
                     <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                       <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-    .tabs.enterprise-tabs.no-transition-global(data-tabs='parent', data-delay='300')&attributes(attributes)
+    .tabs.no-transition-global(data-tabs='parent', data-delay='300')
       .container
         h2.tabs__title.title #[span.tabs__subtitle!=tabs.enterpriseTabs.subTitle] #[!="<br>"] #[!=tabs.enterpriseTabs.title]
         ul.tabs__controls(data-tabs='controls')
@@ -66,7 +66,7 @@ block main
           - for (let i = 0; i < tabs.enterpriseTabs.tabsTitles.length; i++)
             .tabs__element(data-tabs='element')
               - for (let i = 0; i < tabs.enterpriseTabs.titles.length; i++)
-                +card-tab(i, "+").card-tab--enterprise
+                +card-tab(i, "+")
     .map
       .container
         .map__title.title Карта Предприятий #[span!='<br> АО "АРДАТОВСКИЙ <br> СВЕТОТЕХНИЧЕСКИЙ ЗАВОД" ']

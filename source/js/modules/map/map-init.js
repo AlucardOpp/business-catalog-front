@@ -144,6 +144,8 @@ const mapInit = () => {
       });
     }
   }
+
+  myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange: true, zoomMargin: 9});
 };
 
 ymaps.ready(mapInit);
