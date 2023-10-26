@@ -51,10 +51,10 @@ block main
                     <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                       <path d="M16.5 26.125L26.125 16.5M26.125 16.5L16.5 6.875M26.125 16.5L6.875 16.5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-    .tabs.is-disabled.no-transition-global(data-tabs='parent', data-delay='300')
+    .tabs.no-transition-global(data-tabs='parent', data-delay='300')
       .container
         h2.tabs__title.title #[span.tabs__subtitle!=tabs.agroEnterpriseTabs.subTitle] #[!="<br>"] #[!=tabs.agroEnterpriseTabs.title]
-        ul.tabs__controls(data-tabs='controls')
+        ul.tabs__controls.is-disabled(data-tabs='controls')
           <div class="tabs__select custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-1"><span class="custom-select__placeholder">Выберите одну из опций</span>
             <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"><svg width="23" height="22" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow"></use></svg></span></button>
             <ul class="custom-select__list" role="listbox">
@@ -62,7 +62,7 @@ block main
                 li.custom-select__item.tabs__control.btn(tabindex="0" data-select-value=`id-${i}` aria-selected="true" role="option" data-tabs='control')!=tabs.agroEnterpriseTabs.tabsTitles[i]
             </ul>
           </div>
-        .tabs__content(data-tabs='content')
+        .tabs__content.is-disabled(data-tabs='content')
           - for (let i = 0; i < tabs.agroEnterpriseTabs.tabsTitles.length; i++)
             .tabs__element(data-tabs='element')
               - for (let i = 0; i < tabs.agroEnterpriseTabs.titles.length; i++)

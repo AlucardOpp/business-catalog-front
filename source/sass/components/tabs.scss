@@ -10,16 +10,16 @@
     margin-bottom: 40px;
   }
 
-  &.is-disabled {
+  & .tabs-content.is-disabled {
     & .tabs__element {
       opacity: 1;
       visibility: visible;
       position: static;
     }
+  }
 
-    & .tabs__controls {
-      display: none;
-    }
+  & .tabs__controls.is-disabled {
+    display: none;
   }
 
   &__controls {

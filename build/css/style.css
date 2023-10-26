@@ -795,13 +795,13 @@ button,
   margin-bottom: 100px;
 }
 
-.tabs.is-disabled .tabs__element {
+.tabs .tabs-content.is-disabled .tabs__element {
   opacity: 1;
   visibility: visible;
   position: static;
 }
 
-.tabs.is-disabled .tabs__controls {
+.tabs .tabs__controls.is-disabled {
   display: none;
 }
 
