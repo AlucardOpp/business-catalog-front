@@ -1465,10 +1465,11 @@ button,
 
 .header--enterprise .header__subtitle {
   margin-bottom: 42px;
+  max-width: 20%;
 }
 
 .header--enterprise .header__title {
-  max-width: 977px;
+  max-width: 75%;
   margin-bottom: 116px;
 }
 

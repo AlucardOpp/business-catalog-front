@@ -113,6 +113,7 @@
   &--enterprise {
     & .header__subtitle {
       margin-bottom: 42px;
+      max-width: 20%;
 
       @include vp-1563 {
         margin-bottom: 20px;
@@ -126,7 +127,8 @@
     }
 
     & .header__title {
-      max-width: 977px;
+      // max-width: 977px;
+      max-width: 75%;
       margin-bottom: 116px;
 
       @include vp-1563 {
