@@ -1,4 +1,5 @@
 .banner {
+  display: block;
   width: 100%;
   min-height: 220px;
   position: relative;
@@ -14,6 +15,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    transition: background-color $trans-default;
+    position: relative;
+    z-index: 1;
 
     @include vp-1563 {
       padding: 27px 23px 19px 30px;
@@ -24,11 +28,49 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $red-to-right;
+      opacity: 0;
+      transition: opacity $trans-default;
+      z-index: -1;
+    }
+  }
+
+  @include hover {
+    & .banner__content::after {
+        opacity: 1;
+    }
+
+    & .btn::after {
+      opacity: 1;
+    }
   }
 
   &--red {
     & .banner__content {
       background: $red-to-right;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $black-to-right;
+        opacity: 0;
+        transition: opacity $trans-default;
+        z-index: -1;
+      }
     }
   }
 
@@ -109,6 +151,35 @@
       left: 50%;
       transform: translateX(-50%);
       opacity: 0.3;
+    }
+  }
+
+  & .btn {
+    position: relative;
+    z-index: 1;
+
+    @include hover {
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $red-to-right;
+      opacity: 0;
+      transition: opacity $trans-default;
+      z-index: -1;
+    }
+
+    &--red {
+      &::after {
+        background: $black-to-right;
+      }
     }
   }
 

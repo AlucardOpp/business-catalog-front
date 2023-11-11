@@ -656,6 +656,7 @@ button,
 }
 
 .banner {
+  display: block;
   width: 100%;
   min-height: 220px;
   position: relative;
@@ -678,10 +679,44 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .banner--red .banner__content {
   background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+}
+
+.banner--red .banner__content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(223.95% 83.78% at 68.75% 50%, #002C43 0%, #000E22 100%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .banner--map {
@@ -710,6 +745,30 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.banner .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.banner .btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.banner .btn--red::after {
+  background: radial-gradient(223.95% 83.78% at 68.75% 50%, #002C43 0%, #000E22 100%);
 }
 
 [data-tabs=parent] {
@@ -5262,6 +5321,18 @@ button,
 }
 
 @media (hover: hover) {
+  .banner:hover:not(.focus-visible) .banner__content::after {
+    opacity: 1;
+  }
+
+  .banner:hover:not(.focus-visible) .btn::after {
+    opacity: 1;
+  }
+
+  .banner .btn:hover:not(.focus-visible) {
+    opacity: 1;
+  }
+
   .modal__close-btn:hover:not(.focus-visible) {
     opacity: 0.5;
   }

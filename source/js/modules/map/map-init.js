@@ -53,7 +53,7 @@ const mapInit = () => {
   const getRedOptions = () => {
     return {
       iconLayout: 'default#image',
-      iconImageHref: '/local/templates/main/img/svg/red-marker.svg',
+      iconImageHref: '../img/svg/red-marker.svg',
       iconImageSize: [29, 39],
     };
   };
@@ -68,12 +68,12 @@ const mapInit = () => {
     const redClusterer = new ymaps.Clusterer({
       clusterIcons: [
         {
-          href: '/local/templates/main/img/svg/red-clusterer-less-10.svg',
+          href: '../img/svg/red-clusterer-less-10.svg',
           size: [48, 48],
           offset: [0, 0],
         },
         {
-          href: '/local/templates/main/img/svg/red-clusterer-more-10.svg',
+          href: '../img/svg/red-clusterer-more-10.svg',
           size: [56, 56],
           offset: [0, 0],
         }
@@ -102,7 +102,7 @@ const mapInit = () => {
     const getBlueOptions = () => {
       return {
         iconLayout: 'default#image',
-        iconImageHref: '/local/templates/main/img/svg/blue-marker.svg',
+        iconImageHref: '../img/svg/blue-marker.svg',
         iconImageSize: [29, 39],
       };
     };
@@ -115,12 +115,12 @@ const mapInit = () => {
     const blueClusterer = new ymaps.Clusterer({
       clusterIcons: [
         {
-          href: '/local/templates/main/img/svg/blue-clusterer-less-10.svg',
+          href: '../img/svg/blue-clusterer-less-10.svg',
           size: [48, 48],
           offset: [0, 0],
         },
         {
-          href: '/local/templates/main/img/svg/blue-clusterer-more-10.svg',
+          href: '../img/svg/blue-clusterer-more-10.svg',
           size: [56, 56],
           offset: [0, 0],
         }
@@ -145,7 +145,9 @@ const mapInit = () => {
     }
   }
 
-  myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange: true, zoomMargin: 9});
+  if (!((blueCoords.length === 1 && redCoords.length === 0) || (redCoords.length === 1 && blueCoords.length === 0))) {
+    myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange: true, zoomMargin: 9});
+  }
 };
 
 ymaps.ready(mapInit);
