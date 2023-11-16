@@ -25,7 +25,7 @@ block main
     +card-results(cardResults)
     .tabs.industry-category-tabs.no-transition-global(data-tabs='parent', data-delay='300')&attributes(attributes)
       .container
-        h2.tabs__title.title #[!=tabs.industryCategoryTabs.title] #[span.tabs__subtitle!=tabs.industryCategoryTabs.subTitle]
+        h2.tabs__title.title #[span.tabs__subtitle!=tabs.industryCategoryTabs.subTitle] #[span!="<br>"] #[!=tabs.industryCategoryTabs.title]
         ul.tabs__controls(data-tabs='controls')
           <div class="tabs__select custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-1"><span class="custom-select__placeholder">Выберите одну из опций</span>
             <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"><svg width="23" height="22" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow"></use></svg></span></button>

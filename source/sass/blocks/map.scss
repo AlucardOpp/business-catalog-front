@@ -8,14 +8,21 @@
     }
 
     @include vp-767 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      max-width: 86%;
+
       & span {
-        margin-top: 10px;
         display: block;
       }
     }
 
     & span {
       color: $color-mandarian-orange;
+
+      @include vp-767 {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -44,18 +51,20 @@
       justify-content: space-between;
       column-gap: 20px;
       row-gap: 20px;
+      padding-right: 82px;
     }
 
     @include vp-767 {
       flex-direction: column;
-      row-gap: 14px;
+      row-gap: 0;
+      padding-right: 20px;
     }
   }
 
   &__checkboxes {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 40px;
+    column-gap: 45px;
     row-gap: 10px;
     margin-bottom: 39px;
 
@@ -94,7 +103,7 @@
     }
 
     & label {
-      font-size: 16px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       line-height: 110%;
@@ -105,7 +114,15 @@
       align-items: center;
       position: relative;
 
-      &:hover {
+      @include vp-1563 {
+        font-size: 16px;
+      }
+
+      @include vp-767 {
+        font-size: 14px;
+      }
+
+      @include hover {
         opacity: 0.7;
       }
 
@@ -114,7 +131,7 @@
         display: block;
         width: 25px;
         height: 25px;
-        border-radius: 5px;
+        border-radius: 3px;
         margin-right: 14px;
         background-repeat: no-repeat;
         background-position: center center;

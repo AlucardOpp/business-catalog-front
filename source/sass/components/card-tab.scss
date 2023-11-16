@@ -41,6 +41,11 @@
       max-width: 140px;
       max-height: 136px;
     }
+
+    & img {
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
   &__title {

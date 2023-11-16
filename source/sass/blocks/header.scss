@@ -78,14 +78,14 @@
 
   &--industry-category {
     & .header__title {
-      max-width: 711px;
+      max-width: 750px;
 
       @include vp-1563 {
-        max-width: 356px;
+        max-width: 480px;
       }
 
       @include vp-767 {
-        max-width: 261px;
+        max-width: 350px;
       }
     }
   }

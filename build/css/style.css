@@ -1043,6 +1043,12 @@ button,
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
+.card-tab__image img {
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
 .card-tab__title {
   text-align: center;
   font-size: 20px;
@@ -1167,7 +1173,7 @@ button,
   margin-bottom: 40px;
 }
 
-.card-result.card-result--enterprise .card-result__arrow {
+.card-result.card-result--enterprise .card-result__volume svg {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -1301,11 +1307,17 @@ button,
 }
 
 .card-result__text {
-  color: #002940;
+  background: radial-gradient(223.95% 83.78% at 68.75% 50%, #002C43 0%, #000E22 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 18px;
   font-weight: 500;
   line-height: 130%;
   margin: 0 0 20px;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .card-result__text .card-result__found {
@@ -1361,7 +1373,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(7.58%, #B30505), color-stop(97.27%, #640606));
+  background: linear-gradient(270deg, #B30505 7.58%, #640606 97.27%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1369,6 +1382,14 @@ button,
 
 .card-result__volume span:not(:last-child) {
   padding-bottom: 5px;
+}
+
+.card-result__volume svg {
+  margin-top: auto;
+  margin-left: auto;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  stroke: #002940;
 }
 
 .card-result span.card-result__volume-number {
@@ -1397,10 +1418,23 @@ button,
   width: 297px;
   height: 297px;
   border: 1px solid #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .card-result__image:hover {
   opacity: 0.7;
+}
+
+.card-result__image img {
+  width: 225px;
 }
 
 .card-investment {
@@ -1515,7 +1549,7 @@ button,
 }
 
 .header--industry-category .header__title {
-  max-width: 711px;
+  max-width: 750px;
 }
 
 .header--agro-category .header__title {
@@ -3512,6 +3546,7 @@ button,
   font-weight: 700;
   line-height: 110%;
   text-transform: uppercase;
+  word-break: break-word;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
   margin: 0 0 10px 0;
@@ -3736,9 +3771,9 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
+  -webkit-column-gap: 45px;
+  -moz-column-gap: 45px;
+  column-gap: 45px;
   row-gap: 10px;
   margin-bottom: 39px;
 }
@@ -3756,7 +3791,7 @@ button,
 }
 
 .map__checkbox label {
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
@@ -3773,16 +3808,12 @@ button,
   position: relative;
 }
 
-.map__checkbox label:hover {
-  opacity: 0.7;
-}
-
 .map__checkbox label::before {
   content: "";
   display: block;
   width: 25px;
   height: 25px;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-right: 14px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3932,11 +3963,6 @@ button,
     margin-bottom: 10px;
   }
 
-  .tabs__element {
-    -ms-grid-columns: (1fr)[5];
-    grid-template-columns: repeat(5, 1fr);
-  }
-
   .card-tab {
     padding: 10px;
   }
@@ -4043,9 +4069,18 @@ button,
     font-size: 14px;
   }
 
+  .card-result__volume svg {
+    width: 33px;
+    height: 33px;
+  }
+
   .card-result__arrow svg {
     width: 33px;
     height: 33px;
+  }
+
+  .card-result__image img {
+    width: 175px;
   }
 
   .card-result__image {
@@ -4107,7 +4142,7 @@ button,
   }
 
   .header--industry-category .header__title {
-    max-width: 356px;
+    max-width: 480px;
   }
 
   .header--agro-category .header__inner-image {
@@ -4424,6 +4459,7 @@ button,
     -moz-column-gap: 20px;
     column-gap: 20px;
     row-gap: 20px;
+    padding-right: 82px;
   }
 
   .map__checkboxes {
@@ -4435,6 +4471,10 @@ button,
     flex-wrap: nowrap;
     row-gap: 13px;
     margin-bottom: 0;
+  }
+
+  .map__checkbox label {
+    font-size: 16px;
   }
 }
 
@@ -4721,7 +4761,10 @@ button,
   .card-result__title {
     font-size: 16px;
     margin: 13px 43px 23px 90px;
-    position: absolute;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    min-height: 52px;
   }
 
   .card-result__info {
@@ -4731,8 +4774,15 @@ button,
 
   .card-result__text {
     font-size: 12px;
-    margin-top: 90px;
     margin-bottom: 10px;
+  }
+
+  .card-result__tags {
+    margin-top: 0;
+  }
+
+  .card-result__volume {
+    background: none;
   }
 
   .card-result__volume span {
@@ -4742,8 +4792,13 @@ button,
     -webkit-text-fill-color: transparent;
   }
 
+  .card-result__volume svg path {
+    stroke-width: 1.5;
+  }
+
   .card-result span.card-result__volume-number {
-    background: linear-gradient(261deg, #B30505 9.19%, #640606 96.95%);
+    background: -webkit-gradient(linear, right top, left top, color-stop(7.58%, #B30505), color-stop(97.27%, #640606));
+    background: linear-gradient(270deg, #B30505 7.58%, #640606 97.27%);
     background-clip: text;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
@@ -4757,6 +4812,10 @@ button,
     position: absolute;
     right: 0;
     top: 33px;
+  }
+
+  .card-result__image img {
+    width: 60px;
   }
 
   .card-result__image {
@@ -4843,7 +4902,7 @@ button,
   }
 
   .header--industry-category .header__title {
-    max-width: 261px;
+    max-width: 350px;
   }
 
   .header--agro-category .header__inner-image {
@@ -5155,7 +5214,8 @@ button,
   .agricultural__title {
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
   }
 
   .agricultural__list {
@@ -5196,6 +5256,9 @@ button,
   .card-results__title {
     margin-bottom: 20px;
     font-size: 24px;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
   }
 
   .card-results {
@@ -5211,9 +5274,18 @@ button,
     padding: 9px 16px;
   }
 
+  .map__title {
+    font-size: 24px;
+    margin-bottom: 12px;
+    max-width: 86%;
+  }
+
+  .map__title span {
+    display: block;
+  }
+
   .map__title span {
     margin-top: 10px;
-    display: block;
   }
 
   .map #map {
@@ -5226,12 +5298,17 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    row-gap: 14px;
+    row-gap: 0;
+    padding-right: 20px;
   }
 
   .map__checkboxes {
     margin-bottom: 24px;
     row-gap: 10px;
+  }
+
+  .map__checkbox label {
+    font-size: 14px;
   }
 }
 
@@ -5305,8 +5382,8 @@ button,
     margin-left: 60px;
   }
 
-  .card-result__text {
-    margin-top: 75px;
+  .card-result__image img {
+    width: 38px;
   }
 
   .card-result__image {
@@ -5347,5 +5424,9 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .map__checkbox label:hover:not(.focus-visible) {
+    opacity: 0.7;
   }
 }

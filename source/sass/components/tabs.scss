@@ -256,7 +256,7 @@
 
     @include vp-1563 {
       // grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
-      grid-template-columns: repeat(5, 1fr);
+      // grid-template-columns: repeat(5, 1fr);
     }
 
     @media (max-width: 1220px) {
