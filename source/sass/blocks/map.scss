@@ -10,7 +10,6 @@
     @include vp-767 {
       font-size: 24px;
       margin-bottom: 12px;
-      max-width: 86%;
 
       & span {
         display: block;
@@ -30,8 +29,222 @@
     width: 100%;
     height: 500px;
 
-    & ~ ymaps:not(:first-child) {
+    & > ymaps:not(:first-child) {
       display: none;
+    }
+
+    & ymaps[class*="user-selection-none"] {
+      margin-top: 0!important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & ymaps[class*="balloon__layout"] {
+      background: linear-gradient(235deg, #B30505 11.73%, #640606 107.04%);
+      overflow: visible;
+    }
+
+    & ymaps[class*="balloon__close"] {
+      float: none;
+      position: static;
+    }
+
+    & ymaps[class*="balloon__close-button"] {
+      position: absolute;
+      width: 31px;
+      height: 31px;
+      transition: opacity $trans-default;
+      background-color: #002940;
+      border-radius: 50%;
+      opacity: 1;
+      background-image: url('../img/svg/close.svg');
+      background-size: 16px 16px;
+      z-index: 2;
+      top: -12px;
+      right: -15px;
+      background-position: center;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    & ymaps[class*="balloon_layout_panel"] {
+      right: auto;
+      left: 50%;
+      min-width: 280px;
+      max-width: 320px;
+      background-color: $color-transparent;
+      overflow: visible !important;
+      width: calc(100% - 40px);
+      transform: translateX(-50%);
+    }
+
+    & ymaps[class*="balloon_layout_normal"] {
+      @include vp-767 {
+        min-width: 280px;
+        max-width: 320px;
+        transform: translateX(-10px);
+      }
+
+      @media (max-width: 359px) {
+        width: calc(100% - 40px);
+      }
+    }
+
+    & ymaps[class*="balloon__content"] {
+      background: linear-gradient(235deg, #B30505 11.73%, #640606 107.04%);
+      padding: 15px;
+      margin-right: 0;
+      min-width: 238px;
+      max-height: 350px;
+      overflow: auto;
+
+      & ymaps:first-child {
+        width: inherit !important;
+        height: auto !important;
+      }
+
+      & ymaps[class*="balloon-content__header"] {
+        margin-bottom: 17px;
+      }
+
+      & ymaps[class*="balloon-content__footer"] {
+        margin-top: 0;
+      }
+
+      & .balloon-title,
+      & .balloon-subtitle {
+        color: $color-default-white;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      & .balloon-title {
+        margin-bottom: 7px;
+      }
+
+      & .balloon-subtitle {
+        font-weight: 400;
+
+
+        & span {
+          color: $color-provincial-pink;
+        }
+      }
+
+      & .balloon-address {
+        margin: 0 0 11px;
+        color: $color-default-white;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 120%;
+        max-width: 238px;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        word-break: break-word;
+
+        @include vp-767 {
+          max-width: 233px;
+        }
+      }
+
+      & .balloon-contacts {
+        margin: 0 0 17px;
+        color: $color-default-white;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 110%;
+      }
+
+      & .balloon-button {
+        font-family: Montserrat;
+        font-size: 14px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+          display: none;
+        }
+
+        @include vp-1563 {
+          padding: 19px 20px;
+        }
+      }
+
+      & .cluster-info {
+        margin-right: 7px;
+        padding-bottom: 5px;
+        width: 238px;
+
+        & .balloon-subtitle {
+          font-size: 10px;
+        }
+      }
+
+      & .cluster-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      & .cluster-item {
+        display: flex;
+        border-bottom: 1px solid $color-roman;
+        padding-bottom: 10px;
+
+        &:not(:first-child) {
+          margin-top: 17px;
+        }
+
+        & .balloon-button {
+          width: 178px;
+          height: 53px;
+          font-family: Montserrat;
+          font-size: 14px;
+          padding: 14px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & svg {
+            display: none;
+
+            @include vp-767 {
+              display: block;
+            }
+          }
+
+          & span {
+            @include vp-767 {
+              display: none;
+            }
+          }
+
+          @include vp-767 {
+            width: 56px;
+            padding: 9px !important;
+            min-width: auto;
+          }
+        }
+      }
+
+      @include vp-767 {
+        padding-right: 15px;
+        margin-right: 0;
+        max-height: 250px;
+      }
     }
 
     @include vp-1563 {

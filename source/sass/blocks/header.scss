@@ -165,7 +165,8 @@
     & .header__inner-image {
       right: 58px;
       bottom: auto;
-      top: 44%;
+      // top: 44%;
+      top: 26%;
       transform: translateY(-50%);
 
       & img {
@@ -198,12 +199,18 @@
         text-transform: uppercase;
         margin: 0;
         right: -31px;
-        bottom: -154px;
+        // bottom: -154px;
+        bottom: -220px;
         width: 350px;
+
+        & span {
+          font-size: 18px;
+          line-height: 1;
+        }
 
         @include vp-1563 {
           right: -32px;
-          bottom: -148px;
+          bottom: -215px;
         }
       }
 
@@ -216,7 +223,8 @@
         height: 265px;
         transform: none;
         right: 69px;
-        top: 83px;
+        // top: 83px;
+        top: 4%;
       }
 
       @include vp-767 {
@@ -441,6 +449,11 @@
     margin: 0 0 50px;
     position: relative;
     z-index: 1;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     & span {
       color: $color-provincial-pink;
@@ -456,7 +469,6 @@
   }
 
   &__arrow {
-
     & svg {
       stroke: $color-default-white;
       width: 33px;

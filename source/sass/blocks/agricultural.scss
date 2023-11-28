@@ -22,10 +22,6 @@
     row-gap: 20px;
 
     @include vp-1563 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (max-width: 1274px) {
       grid-template-columns: repeat(auto-fit, minmax(231px, 1fr));
     }
 

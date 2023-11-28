@@ -24,7 +24,7 @@
     min-height: auto;
   }
 
-  &:hover {
+  @include hover {
     background-color: $color-tangaroa;
     border: 1px solid $color-tangaroa;
 
@@ -129,7 +129,7 @@
       border-bottom: 2px solid $color-default-white;
     }
 
-    &:hover {
+    @include hover {
       background-color: $color-mandarian-orange;
       border: none;
 

@@ -1263,6 +1263,9 @@ button,
   display: block;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .card-result__title .card-result__found {
@@ -1295,6 +1298,9 @@ button,
   font-size: 18px;
   font-weight: 600;
   line-height: 110%;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .card-result__info-text a {
@@ -1577,7 +1583,7 @@ button,
 .header--enterprise .header__inner-image {
   right: 58px;
   bottom: auto;
-  top: 44%;
+  top: 26%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -1608,8 +1614,13 @@ button,
   text-transform: uppercase;
   margin: 0;
   right: -31px;
-  bottom: -154px;
+  bottom: -220px;
   width: 350px;
+}
+
+.header--enterprise .header__inner-image .header__image-text span {
+  font-size: 18px;
+  line-height: 1;
 }
 
 .header--investment-project .header__subtitle {
@@ -1701,6 +1712,9 @@ button,
   margin: 0 0 50px;
   position: relative;
   z-index: 1;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .header__title span {
@@ -3519,27 +3533,6 @@ button,
   min-height: 210px;
 }
 
-.industry-card:hover {
-  background-color: #002940;
-  border: 1px solid #002940;
-}
-
-.industry-card:hover .industry-card__title {
-  color: #ffffff;
-}
-
-.industry-card:hover .industry-card__subtitle {
-  color: rgba(151, 234, 255, 0.8);
-}
-
-.industry-card:hover .industry-card__companies {
-  color: rgba(151, 234, 255, 0.8);
-}
-
-.industry-card:hover .industry-card__companies svg {
-  stroke: rgba(151, 234, 255, 0.8);
-}
-
 .industry-card__title {
   color: #000e22;
   font-size: 24px;
@@ -3601,23 +3594,6 @@ button,
 
 .industry-card--dark-blue .industry-card__companies svg {
   stroke: rgba(151, 234, 255, 0.8);
-}
-
-.industry-card--dark-blue:hover {
-  background-color: #951a1a;
-  border: none;
-}
-
-.industry-card--dark-blue:hover .industry-card__subtitle {
-  color: #fce6d9;
-}
-
-.industry-card--dark-blue:hover .industry-card__companies {
-  color: #ffffff;
-}
-
-.industry-card--dark-blue:hover .industry-card__companies svg {
-  stroke: #fce6d9;
 }
 
 .agricultural {
@@ -3714,6 +3690,8 @@ button,
 }
 
 .navigation .navigation__button {
+  min-width: 72px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3725,7 +3703,7 @@ button,
   justify-content: center;
   border: 1px solid #951a1a;
   background-color: #f2f4f4;
-  padding: 19px 29px;
+  padding: 0 10px;
   cursor: pointer;
   color: #951a1a;
   text-align: center;
@@ -3761,7 +3739,198 @@ button,
   height: 500px;
 }
 
-.map #map ~ ymaps:not(:first-child) {
+.map #map > ymaps:not(:first-child) {
+  display: none;
+}
+
+.map #map ymaps[class*=user-selection-none] {
+  margin-top: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.map #map ymaps[class*=balloon__layout] {
+  background: linear-gradient(235deg, #B30505 11.73%, #640606 107.04%);
+  overflow: visible;
+}
+
+.map #map ymaps[class*=balloon__close] {
+  float: none;
+  position: static;
+}
+
+.map #map ymaps[class*=balloon__close-button] {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  background-color: #002940;
+  border-radius: 50%;
+  opacity: 1;
+  background-image: url("../img/svg/close.svg");
+  background-size: 16px 16px;
+  z-index: 2;
+  top: -12px;
+  right: -15px;
+  background-position: center;
+}
+
+.map #map ymaps[class*=balloon__close-button]:hover {
+  opacity: 0.7;
+}
+
+.map #map ymaps[class*=balloon_layout_panel] {
+  right: auto;
+  left: 50%;
+  min-width: 280px;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: visible !important;
+  width: calc(100% - 40px);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.map #map ymaps[class*=balloon__content] {
+  background: linear-gradient(235deg, #B30505 11.73%, #640606 107.04%);
+  padding: 15px;
+  margin-right: 0;
+  min-width: 238px;
+  max-height: 350px;
+  overflow: auto;
+}
+
+.map #map ymaps[class*=balloon__content] ymaps:first-child {
+  width: inherit !important;
+  height: auto !important;
+}
+
+.map #map ymaps[class*=balloon__content] ymaps[class*=balloon-content__header] {
+  margin-bottom: 17px;
+}
+
+.map #map ymaps[class*=balloon__content] ymaps[class*=balloon-content__footer] {
+  margin-top: 0;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-title,
+.map #map ymaps[class*=balloon__content] .balloon-subtitle {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-title {
+  margin-bottom: 7px;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-subtitle {
+  font-weight: 400;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-subtitle span {
+  color: #fce6d9;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-address {
+  margin: 0 0 11px;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 238px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-contacts {
+  margin: 0 0 17px;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-button {
+  font-family: Montserrat;
+  font-size: 14px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.map #map ymaps[class*=balloon__content] .balloon-button svg {
+  display: none;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-info {
+  margin-right: 7px;
+  padding-bottom: 5px;
+  width: 238px;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-info .balloon-subtitle {
+  font-size: 10px;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #e95a5a;
+  padding-bottom: 10px;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-item:not(:first-child) {
+  margin-top: 17px;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-item .balloon-button {
+  width: 178px;
+  height: 53px;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding: 14px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.map #map ymaps[class*=balloon__content] .cluster-item .balloon-button svg {
   display: none;
 }
 
@@ -4173,7 +4342,7 @@ button,
 
   .header--enterprise .header__inner-image .header__image-text {
     right: -32px;
-    bottom: -148px;
+    bottom: -215px;
   }
 
   .header--enterprise .header__inner-image {
@@ -4182,7 +4351,7 @@ button,
     -webkit-transform: none;
     transform: none;
     right: 69px;
-    top: 83px;
+    top: 4%;
   }
 
   .header--investment-project .header__subtitle {
@@ -4351,7 +4520,7 @@ button,
 
   .footer__text {
     font-size: 18px;
-    max-width: 726px;
+    max-width: 73.8%;
   }
 
   .footer__outro {
@@ -4360,8 +4529,8 @@ button,
   }
 
   .footer__image {
-    width: 277px;
-    max-height: 413px;
+    width: 236px;
+    height: auto;
   }
 
   .footer__image img {
@@ -4398,8 +4567,7 @@ button,
   }
 
   .agricultural__list {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(231px, 1fr));
   }
 
   .agricultural .banner .banner__image {
@@ -4442,6 +4610,10 @@ button,
     margin-bottom: 0;
   }
 
+  .map #map ymaps[class*=balloon__content] .balloon-button {
+    padding: 19px 20px;
+  }
+
   .map #map {
     margin-top: 34px;
   }
@@ -4480,10 +4652,6 @@ button,
 
 @media (max-width: 1274px) {
   .industry__list {
-    grid-template-columns: repeat(auto-fit, minmax(231px, 1fr));
-  }
-
-  .agricultural__list {
     grid-template-columns: repeat(auto-fit, minmax(231px, 1fr));
   }
 }
@@ -4643,10 +4811,8 @@ button,
   }
 
   .card-tab__image {
-    width: auto;
-    height: auto;
-    max-width: 140px;
-    max-height: 136px;
+    width: 140px;
+    height: 136px;
   }
 
   .search__input-container {
@@ -4761,9 +4927,6 @@ button,
   .card-result__title {
     font-size: 16px;
     margin: 13px 43px 23px 90px;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    hyphens: auto;
     min-height: 52px;
   }
 
@@ -5140,6 +5303,7 @@ button,
   }
 
   .footer__image {
+    height: 100%;
     max-height: 290px;
     width: 201px;
     bottom: 78px;
@@ -5270,14 +5434,15 @@ button,
   }
 
   .navigation .navigation__button {
+    min-width: 40px;
+    height: 38px;
     font-size: 16px;
-    padding: 9px 16px;
+    padding: 0 10px;
   }
 
   .map__title {
     font-size: 24px;
     margin-bottom: 12px;
-    max-width: 86%;
   }
 
   .map__title span {
@@ -5286,6 +5451,37 @@ button,
 
   .map__title span {
     margin-top: 10px;
+  }
+
+  .map #map ymaps[class*=balloon_layout_normal] {
+    min-width: 280px;
+    max-width: 320px;
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  .map #map ymaps[class*=balloon__content] .balloon-address {
+    max-width: 233px;
+  }
+
+  .map #map ymaps[class*=balloon__content] .cluster-item .balloon-button svg {
+    display: block;
+  }
+
+  .map #map ymaps[class*=balloon__content] .cluster-item .balloon-button span {
+    display: none;
+  }
+
+  .map #map ymaps[class*=balloon__content] .cluster-item .balloon-button {
+    width: 56px;
+    padding: 9px !important;
+    min-width: auto;
+  }
+
+  .map #map ymaps[class*=balloon__content] {
+    padding-right: 15px;
+    margin-right: 0;
+    max-height: 250px;
   }
 
   .map #map {
@@ -5395,6 +5591,10 @@ button,
   .header__blue-image .header__blue-content p {
     font-size: 11px;
   }
+
+  .map #map ymaps[class*=balloon_layout_normal] {
+    width: calc(100% - 40px);
+  }
 }
 
 @media (hover: hover) {
@@ -5424,6 +5624,44 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .industry-card:hover:not(.focus-visible) {
+    background-color: #002940;
+    border: 1px solid #002940;
+  }
+
+  .industry-card:hover:not(.focus-visible) .industry-card__title {
+    color: #ffffff;
+  }
+
+  .industry-card:hover:not(.focus-visible) .industry-card__subtitle {
+    color: rgba(151, 234, 255, 0.8);
+  }
+
+  .industry-card:hover:not(.focus-visible) .industry-card__companies {
+    color: rgba(151, 234, 255, 0.8);
+  }
+
+  .industry-card:hover:not(.focus-visible) .industry-card__companies svg {
+    stroke: rgba(151, 234, 255, 0.8);
+  }
+
+  .industry-card--dark-blue:hover:not(.focus-visible) {
+    background-color: #951a1a;
+    border: none;
+  }
+
+  .industry-card--dark-blue:hover:not(.focus-visible) .industry-card__subtitle {
+    color: #fce6d9;
+  }
+
+  .industry-card--dark-blue:hover:not(.focus-visible) .industry-card__companies {
+    color: #ffffff;
+  }
+
+  .industry-card--dark-blue:hover:not(.focus-visible) .industry-card__companies svg {
+    stroke: #fce6d9;
   }
 
   .map__checkbox label:hover:not(.focus-visible) {

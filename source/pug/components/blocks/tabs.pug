@@ -1,7 +1,7 @@
 mixin tabs()
   .tabs.no-transition-global(data-tabs='parent', data-delay='300')&attributes(attributes)
     .container
-      h2.tabs__title.title #[!=tabs.mainTabs.title] #[!="<br>"]  #[span.tabs__subtitle!=tabs.mainTabs.subTitle]
+      h2.tabs__title.title #[span.tabs__subtitle!=tabs.mainTabs.subTitle] #[!="<br>"] #[!=tabs.mainTabs.title]
       ul.tabs__controls(data-tabs='controls')
         //- - for (let i = 0; i < tabs.mainTabs.tabsTitles.length; i++)
         //-     li

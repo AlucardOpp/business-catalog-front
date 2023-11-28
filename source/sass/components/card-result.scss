@@ -239,6 +239,11 @@
     margin: 0 0 20px;
     display: block;
     transition: opacity $trans-default;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     & .card-result__found {
       background: $red-to-right;
@@ -261,11 +266,6 @@
       margin: 13px 43px 23px 90px;
       // position: absolute;
       // max-width: 100%;
-      word-break: break-word;
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      hyphens: auto;
       min-height: 52px;
     }
 
@@ -297,6 +297,11 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 110%;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     & a {
       transition: color $trans-default;
